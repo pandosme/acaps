@@ -14,13 +14,13 @@ Version 20.2.1
 6. If you want to trigger on sun noon events, set the cameras GPS coordintates in the tab "Sun Events"
 
 ## Creating Timelapse
-You can have a number of timelpase recording at the same time.  At least three images in a reqcording is required before the recording is show in the recording list.
+You can have a number of ongoing timelpase recordings at the same time.  Note that at least three images needs to be in a recording  before the recording is show in the recording list.
 
 1. Click "Add Timelapse"
 2. Give the recording a descriptive name
 3. Slsect Storage device (SD Card or Network Share).  They need to be mounted before starting Timelapse Me.
-4. Select the event that will trigger image capture.  Note that timers or sun events needs to be configured before shown in select list.
-5. Select aspect ration and resolution.  Resolution cannot be changed after recording started.
+4. Select the event that will trigger image capture.  Note that timers or sun events needs to be configured before shown in the Event Select list whan adding timelapse.
+5. Select aspect ration and resolution.  Resolution cannot be changed after recording started.  Large resolutions will generate very large recording files.
 6. Select the Playback FPS.  Playback can be changed after recording started.
 7. Set light conditions Light conditions to only capture images when sun is up.
 8. Click Save
