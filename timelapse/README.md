@@ -25,6 +25,10 @@ You can have a number of ongoing timelpase recordings at the same time.  Note th
 7. Set light conditions Light conditions to only capture images when sun is up.
 8. Click Save
 
+Your first test recording should be triggered by a timer every 10 seconds with a small resolution.  That gives you an oppertunity to play/test downloding, frame-inspection before going for long-time recording.
+
+Recordings triggeered by e.g. Motion Detection produces a usable forensic search video.
+
 ## Sun Events
 Sun events control the "Light Conditions" and triggers an event a sun noon for daily image captures.
 1. On left side, move the marker to the cameras position.
