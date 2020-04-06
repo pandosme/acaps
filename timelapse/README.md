@@ -8,13 +8,13 @@ Version 20.2.1
 ## Installation
 1. Download the appropriate EAP-file (mips or arm7hf)
 2. Install the ACAP in the camera
-3. Before starting the ACAP, mount a SD Card or Network Share
+3. Before starting the ACAP, mount SD Card or Network Share
 4. Start Timelapse Me
 5. Go to Timelapse user interface
 6. If you want to trigger on sun noon events, set the cameras GPS coordintates in the tab "Sun Events"
 
 ## Creating Timelapse
-You can have a number of timelpase recording at the same time.  At least three images in a reqcording is required before the recording is show in the list.
+You can have a number of timelpase recording at the same time.  At least three images in a reqcording is required before the recording is show in the recording list.
 
 1. Click "Add Timelapse"
 2. Give the recording a descriptive name
@@ -52,9 +52,4 @@ View each captured image in the recording
 
 ## Archving
 In order to reduce the risk of filling up storage, recprdongs should be automaticially archived with a retention period.  The retention period is to give you enough time to download recording before it is removed.  Archiving frequency should de befined on how often images are capture.  A recording triggered by an image per minute should be archived daily.  Images capture once per day should be archived on 9-12 months.
-
-
-
-
-
 
