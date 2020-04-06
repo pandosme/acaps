@@ -1,4 +1,4 @@
-# Tracker
+# Timelapse Me
 Axis Camera ACAP that generate timelapse videos triggered by timer, analytic events or sun noon.
 
 # History
