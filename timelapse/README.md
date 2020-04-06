@@ -1,5 +1,5 @@
 # Timelapse Me
-Axis Camera ACAP that generate timelapse videos triggered by timer, analytic events or sun noon.
+Axis Camera ACAP that produces timelapse videos (AVI) triggered by timer, camera events or on sun noon.
 
 # History
 Version 20.2.1
@@ -31,6 +31,8 @@ Sun events control the "Light Conditions" and triggers an event a sun noon for d
 2. Set the Timezone setting.
 3. CLick Save
 
+The event is presented under "ACAP" | "Timelapse Me" | "Sun Noon"
+
 ## Timers
 Add user-defined timers to trigger on.
 
@@ -38,18 +40,17 @@ Add user-defined timers to trigger on.
 A list that shows all timelapse recordings
 
 ## Actions
-- Edit timelpase settings.  Not all properties can be changed.
+- Edit timelpase settings.  Not all properties can be changed after recording started.
 - Disable temporarily pauses recording
 - Archive (manual archive) 
 - Reset flushes recording but continues to capture images
 - Delete removes settings and recording
 
 ## Download
-CLick on the timelapse name to down load it to the computer.
+CLick on the timelapse name to down load it to the computer.  You can download the recording while it is active.  If you are not satisfied with the playback FPS, edit FPS playback in the timelapse settings and download it again.
 
 ## Frames
 View each captured image in the recording
 
 ## Archving
-In order to reduce the risk of filling up storage, recprdongs should be automaticially archived with a retention period.  The retention period is to give you enough time to download recording before it is removed.  Archiving frequency should de befined on how often images are capture.  A recording triggered by an image per minute should be archived daily.  Images capture once per day should be archived on 9-12 months.
-
+In order to reduce the risk of filling up storage, recordings should be automaticially archived with a retention period.  The retention period gives you time to download recording before it is automatically removed.  Archiving frequency should be defined by how often images are captured.  A recording triggered by an image every minute should be archived daily.  Images capture once per day should be archived between 6-12 months.
