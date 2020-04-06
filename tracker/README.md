@@ -1,5 +1,5 @@
 # Tracker
-Axis Camera & Radar ACAP that publish motion analytics data and radar data to MQTT. 
+ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQTT. 
 
 # History
 February 22,2020 Version 1.2.3
