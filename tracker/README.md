@@ -18,7 +18,15 @@ March 21, 2020 Version 1.2.7
 March 22, 2020 Version 1.2.8
 - Minor fixes
 
-# Topics
+
+## MQTT Settings
+![home](pictures/home.jpeg)
+
+## Monitor - MQTT Visualization
+In the monitor tab you can validate published data as bounding boxes and/or paths
+![home](pictures/monitor.jpeg)
+
+# MQTT Topics
 
 ### connect/MQTT_Client_ID  [RETAINED]
 Annoucement when connecting to broker
