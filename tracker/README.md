@@ -22,7 +22,7 @@ March 22, 2020 Version 1.2.8
 ## MQTT Settings
 ![home](pictures/home.png)
 
-## Filter
+## Filter - Optimze the system
 In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
 
 * Birth area:  Defines an  area that the object needs to appear or pass before tracking starts.  Click the green button and use mouse to adjust area.
