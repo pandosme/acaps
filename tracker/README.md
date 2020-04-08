@@ -20,11 +20,12 @@ March 22, 2020 Version 1.2.8
 
 
 ## MQTT Settings
-![home](pictures/home.jpeg)
+![home](pictures/home.png)
 
 ## Monitor - MQTT Visualization
 In the monitor tab you can validate published data as bounding boxes and/or paths
-![home](pictures/monitor.jpeg)
+
+![home](pictures/monitor.png)
 
 # MQTT Topics
 
