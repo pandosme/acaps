@@ -40,6 +40,17 @@ In the monitor tab you can validate published data as bounding boxes and/or path
 
 ![home](pictures/monitor.png)
 
+## Publish - User defined publish
+Tracker can monitor any event in camera and send a MQTT message.
+
+1. Select the camera event
+2. Set whatever topic you want
+3. Set any payload you want or use * to get the event payalod as the MQTT payload.  The * is needed if you want to get payload including data produced by an analytics ACAP.
+
+![home](pictures/publish.png)
+
+
+
 # MQTT Topics
 
 ### connect/MQTT_Client_ID  [RETAINED]
