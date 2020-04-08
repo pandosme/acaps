@@ -22,6 +22,19 @@ March 22, 2020 Version 1.2.8
 ## MQTT Settings
 ![home](pictures/home.png)
 
+## Filter
+In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
+
+* Birth area:  Defines an  area that the object needs to appear or pass before tracking starts.  Click the green button and use mouse to adjust area.
+* Minumum objects size:  The minimum size an object needs to have to be before tracking starts.  This filter is a bit unpredicable and it is recommended to use small minimum size.
+* Minumum age:  Filters short and sporadic objects.  Set the number of milliseconds that object needs tracked before being published.  A recommed value is between 100 - 1000 ms depending on scene.
+* Maximum Idle:  Sometimes objects will be hanging in the scene.  Set maximum time before tracking is stopped.  Recommeded value is 60000+ ms.
+* Swaying:  How far the object needs to move (% of image) before a new object is published.  A recommed value is 3-5%.
+
+So, tracking starts when an object passes birth area, have a minimum age, at a minimum size.  Objects are updated/published when object moves saying distance.  Once the tracker started it will continue to track the object until it leaves the scene or terminated by Max Idle Time.
+
+![filter](pictures/filter.png)
+
 ## Monitor - MQTT Visualization
 In the monitor tab you can validate published data as bounding boxes and/or paths
 
