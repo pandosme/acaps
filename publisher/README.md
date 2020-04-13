@@ -1,5 +1,5 @@
 # Publisher
-AN ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server.
+AN ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server with simple and usable payloads.
 
 # Overview
 Integeating data from one service to another can be done in different ways.  Publisher simplifies getting data into Influx
