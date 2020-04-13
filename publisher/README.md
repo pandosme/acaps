@@ -1,5 +1,5 @@
 # Publisher
-ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server.
+AN ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server.
 
 # Overview
 Integeating data from one service to another can be done in different ways.  Publisher simplifies getting data into Influx
@@ -43,10 +43,10 @@ For HTTP this will create a property in the POST payload
 ```
 
 ## Data Producers
-Current supported data producers
+> The list of supported data producers will be extended in the future
 
 ### AXIS License Plate Verifier
-Publish the license plate captured by ALPV
+Publish the captured license plate
 
 Influx
 ```
@@ -66,7 +66,7 @@ BODY: {
 ```
 
 ## AXIS Direction Detector
-Capture when people are coning in ot leaving.  
+Publish when people are coming in ot leaving.
 
 Influx
 Querying the sum of the value over a period of time will give occupancy.
@@ -112,7 +112,8 @@ For Influx the is the name of the Influx measurement that data will be stored.
 For HTTP this will be added as a property
 
 ### User Tags
-Sometime it is needed to add additional tags that are not part of the data producer payload.  Note that you may not use an space in key or value.
+Sometimes it is needed to add additional tags that are not part of the data producer payload.
+> Note that you may not use an space in key or value.
 
 Examples
 ```
