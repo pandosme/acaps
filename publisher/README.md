@@ -69,12 +69,14 @@ BODY: {
 Publish when people are coming in ot leaving.
 
 Influx
-Querying the sum of the value over a period of time will give occupancy.
+
 ```
 URL: http://address/write?db=myDatabase&precision=ms
 BODY In: myTopic,device=camera1,direction=in value=1 1586793127914
 BODY Out: myTopic,device=camera1,direction=out value=-1 1586793127914
 ```
+> Querying the sum of the value over a period of time will give occupancy.
+
 HTTP
 ```
 URL: http://address
