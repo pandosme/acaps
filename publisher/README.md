@@ -5,18 +5,17 @@ ACAP that can publish data from Analytics ACAP directly to an Influx Database or
 Integeating data from one service to another can be done in different ways.  Publisher simplifies getting data into Influx
 (a time-series database).  This provides simplification for use-cases such as logging, counting and forensic search.
 
-
 # Changle log
 April 13,2020 Version 1.0.0
 - First version
 
-# Targets
+
 ![home](pictures/target.PNG)
 
-### Target Type
+## Target Type
 Select Influx or HTTP depending on what server you may have.  MQTT is not yet implemented.
 
-### Address
+## Address
 Set IP address or FQDN and port number.
 
 Examples
@@ -25,13 +24,13 @@ Examples
   influx.server.com:8086
   10.11.12.13:50000
 ```
-### Database
+## Database
 Set the name of the database (only applicable for Influx).  Note that you need to create the database first.  Setting up an Influx server is easy with the [Influx Docker](https://hub.docker.com/_/influxdb).
 
-# Data
+
 ![home](pictures/data.PNG)
 
-### Device ID
+## Device ID
 For Influx this will create a tag
 ```
 device=theName
@@ -46,8 +45,9 @@ For HTTP this will create a property in the POST payload
 ## Data Producers
 Current supported data producers
 
-### AXIS License Plate Verifier (ALPV)
+### AXIS License Plate Verifier
 Publish the license plate captured by ALPV
+
 Influx
 ```
 URL: http://address/write?db=myDatabase&precision=ms
@@ -65,7 +65,7 @@ BODY: {
 
 ```
 
-## AXIS Direction Detector (Direction)
+## AXIS Direction Detector
 Capture when people are coning in ot leaving.  
 
 Influx
@@ -88,7 +88,7 @@ BODY: {
 
 ```
 
-### AXIS Video Motion Detection (VMD)
+### AXIS Video Motion Detection
 Messages will only be sent on motion start as the primary use-case is logging, not controling actions.
 
 Influx
@@ -122,17 +122,16 @@ location=New-York,building=A
 For Influx the names will be added a tags.
 For HTTP the names will be added as properties in JSON payload.
 
-# Security
+
 ![home](pictures/security.PNG)
 
-### HTTPS/TLS
-If the server requires HTTPS, set valur other than "No".  This will append "https://" to the address.
+## HTTPS/TLS
+If the server requires HTTPS, set value other than "No".  This will append "https://" to the address.
 If the server has a self-signed or private CA certificate, select "Accept untrusted certificate".
 If the server has a certificate signed by a public CA (e.g. LetsEnrypt), select "Validate certificate"
 
-### Autnentication
+## Authentication
 * None - No authentication will be done regardless if user/password is set
 * Basic -  Influx supports basic
 * Digest (encrypted passwords) - Many web servers supprts digest authentication.
 * Beare/Token.  Set you token in the password field.  This will append HTTP header "Authorization: Bearer myToken"
-
