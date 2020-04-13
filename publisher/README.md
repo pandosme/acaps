@@ -7,8 +7,9 @@ Integeating data from one service to another can be done in different ways.  Pub
 
 # Requirements
 1. An Axis Camera
-2. Any of the supported analytics intalled and running
-3. An Influx server or HTTP server that cameras can access
+2. Select, download and install the file (mips.eap or armv7hf.eap) depending on your camera.
+3. Any of the supported analytics intalled and running (see Data Producers)
+4. An Influx server or HTTP server that cameras can access.
 
 # Changle log
 April 13,2020 Version 1.0.0
