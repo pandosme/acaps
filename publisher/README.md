@@ -1,9 +1,14 @@
 # Publisher
-AN ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server with simple and usable payloads.
+An ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server with simple and usable payloads.
 
 # Overview
 Integeating data from one service to another can be done in different ways.  Publisher simplifies getting data into Influx
 (a time-series database).  This provides simplification for use-cases such as logging, counting and forensic search.
+
+# Requirements
+1. An Axis Camera
+2. Any of the supported analytics intalled and running
+3. An Influx server or HTTP server that cameras can access
 
 # Changle log
 April 13,2020 Version 1.0.0
