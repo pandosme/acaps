@@ -11,7 +11,7 @@ April 13,2020 Version 1.0.0
 - First version
 
 # Targets
-![home](pictures/target.png)
+![home](pictures/target.PNG)
 
 ### Target Type
 Select Influx or HTTP depending on what server you may have.  MQTT is not yet implemented.
@@ -29,7 +29,7 @@ Examples
 Set the name of the database (only applicable for Influx).  Note that you need to create the database first.  Setting up an Influx server is easy with the [Influx Docker](https://hub.docker.com/_/influxdb).
 
 # Data
-![home](pictures/data.png)
+![home](pictures/data.PNG)
 
 ### Device ID
 For Influx this will create a tag
@@ -43,11 +43,11 @@ For HTTP this will create a property in the POST payload
   ...
 ```
 
-### Data Producers
+## Data Producers
 Current supported data producers
 
-* AXIS License Plate Verifier (ALPV)
-
+### AXIS License Plate Verifier (ALPV)
+Publish the license plate captured by ALPV
 Influx
 ```
 URL: http://address/write?db=myDatabase&precision=ms
@@ -65,8 +65,11 @@ BODY: {
 
 ```
 
-* AXIS Direction Detector (Direction)
+## AXIS Direction Detector (Direction)
+Capture when people are coning in ot leaving.  
+
 Influx
+Querying the sum of the value over a period of time will give occupancy.
 ```
 URL: http://address/write?db=myDatabase&precision=ms
 BODY In: myTopic,device=camera1,direction=in value=1 1586793127914
@@ -85,7 +88,7 @@ BODY: {
 
 ```
 
-* AXIS Video Motion Detection (VMD)
+### AXIS Video Motion Detection (VMD)
 Messages will only be sent on motion start as the primary use-case is logging, not controling actions.
 
 Influx
@@ -120,7 +123,7 @@ For Influx the names will be added a tags.
 For HTTP the names will be added as properties in JSON payload.
 
 # Security
-![home](pictures/security.png)
+![home](pictures/security.PNG)
 
 ### HTTPS/TLS
 If the server requires HTTPS, set valur other than "No".  This will append "https://" to the address.
