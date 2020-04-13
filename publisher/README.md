@@ -115,12 +115,12 @@ For HTTP this will be added as a property
 
 ### User Tags
 Sometimes it is needed to add additional tags that are not part of the data producer payload.
-> Note that you may not use an space in key or value.
+> Note that you may not use any spaces in the key or value field (if needed, use '-' or '_')
 
 Examples
 ```
 location=New-York
-location=New-York,building=A
+country=France,city=Paris,store=some-id
 ```
 For Influx the names will be added a tags.
 For HTTP the names will be added as properties in JSON payload.
