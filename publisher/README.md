@@ -2,8 +2,8 @@
 An ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server with simple and usable payloads.
 
 # Overview
-Integeating data from one service to another can be done in different ways.  Publisher simplifies getting data into Influx
-(a time-series database).  This provides simplification for use-cases such as logging, counting and forensic search.
+Integerating data from one service to another can be done in different ways.  Publisher simplifies getting analytics data to Influx,
+a time-series database.  This provides simplification for use-cases such as logging, counting, data analysis and forensic search.
 
 # Requirements
 1. An Axis Camera
