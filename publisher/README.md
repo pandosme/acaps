@@ -136,7 +136,7 @@ For HTTP the names will be added as properties in JSON payload.
 ### Image
 Sometimes you want to store an image when detection occured.  Setting Image will append a JPEG image on published data.  Leave blank if you do not want an image.  The image will be base64 encoded.
 
-> Note that images takes up a lot of storage space.  It is recommended to use a medium size resolution, typical 640x360 (19:9), 640x40 (4:3) or 640x640 (1:1) depending on the camera aspect ration. 
+> Note that images takes up a lot of storage space.  It is recommended to use a medium size resolution, typical 640x360 (16:9), 640x480 (4:3) or 640x640 (1:1) depending on the camera aspect ration.
 
 Image syntax
 ```
