@@ -35,6 +35,7 @@ Examples
 Set the name of the database (only applicable for Influx).  Note that you need to create the database first.  Setting up an Influx server is easy with the [Influx Docker](https://hub.docker.com/_/influxdb).
 
 
+
 ![home](pictures/data.PNG)
 
 ## Device ID
@@ -132,6 +133,17 @@ country=France,city=Paris,store=some-id
 For Influx the names will be added a tags.
 For HTTP the names will be added as properties in JSON payload.
 
+### Image
+Sometimes you want to store an image when detection occured.  Setting Image will append a JPEG image on published data.  Leave blank if you do not want an image.  The image will be base64 encoded.
+
+> Note that images takes up a lot of storage space.  It is recommended to use a medium size resolution, typical 640x360 (19:9), 640x40 (4:3) or 640x640 (1:1) depending on the camera aspect ration. 
+
+Image syntax
+```
+resolution=640x360
+```
+Influx: The image will be stored on Influx with value name "image".
+HTTP: The image will have JSON property name "image".
 
 ![home](pictures/security.PNG)
 
