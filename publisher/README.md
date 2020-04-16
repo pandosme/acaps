@@ -12,9 +12,10 @@ a time-series database.  This provides simplification for use-cases such as logg
 4. An Influx server or HTTP server that cameras can access.
 
 # Changle log
-April 13,2020 Version 1.0.0
-- First version
-April 16,2020 Version 1.1.1
+- April 13,2020 Version 1.0.0
+* First version
+
+* April 16,2020 Version 1.1.1
 - Added option to publish a JPEG image in Influx and HTTP
 
 # Configuration
