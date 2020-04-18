@@ -1,24 +1,6 @@
 # Tracker
 ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQTT. 
 
-# History
-February 22,2020 Version 1.2.3
-- Added Root Topic
-- Added Setting: image.publish to control publishing image on connect
-  Images will not be automatically published by default on connect
-- Added Setting: sensors.cpu & sensors.network to control publishing sensors
-- Stopped publishing settings
-
-March 4, 2020 Version 1.2.5
-- Removed auto-subscription set/<client>/settings
-
-March 21, 2020 Version 1.2.7
-- Fixed crash for Axis D2050 Radar
-
-March 22, 2020 Version 1.2.8
-- Minor fixes
-
-
 ## MQTT Settings
 ![home](pictures/home.png)
 
