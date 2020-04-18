@@ -1,4 +1,4 @@
-# Publisher
+# Publisher 1.1.1
 An ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server with simple and usable payloads.
 
 # Overview
@@ -11,12 +11,6 @@ a time-series database.  This provides simplification for use-cases such as logg
 3. Any of the supported analytics intalled and running (see Data Producers)
 4. An Influx server or HTTP server that cameras can access.
 
-# Changle log
-April 13,2020 Version 1.0.0
-* First version
-
-April 16,2020 Version 1.1.1
-* Added option to publish a JPEG image in Influx and HTTP
 
 # Configuration
 
