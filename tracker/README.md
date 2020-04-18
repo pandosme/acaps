@@ -1,4 +1,4 @@
-# Tracker
+# Tracker 1.3.0
 ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQTT. 
 
 ## MQTT Settings
@@ -44,12 +44,8 @@ Annoucement when connecting to broker
   model: string,           //Axis product model
   type: string,            //Example "Network Camera"
   serial: string,          //Example "ACCCxxxxxxx"
-  mac: string,             //Example "AC:CC:xx:xx:xx:xx"
   IPv4: string,            //IP address
   firmware: string         //Firmware version
-  chip: string,            //HW platform
-  aspect: string,          //Aspect ration "16:9","4:3","1:1"
-  rotation: number         //0,90,180,270 degrees rotation
 }
 ```
 
@@ -59,12 +55,14 @@ Last-will testamanet when disconnecting from broker
 {
   connected: false,
   client: string,          //MQTT client ID
+  serial: string,          //Example "ACCCxxxxxxx"
 }
 ```
 ### tracker/MQTT_Client_ID
 ```
 {
-  source: string,       //MQTT Client ID
+  device: string,       //Device serial number
+  client: string,       //MQTT Client ID
   id: number,           //Unique tracking ID for each object being tracked
   phase: number,        //0: new object detected, 1: object is tracked, 2: object left scene
   timestamp: number,    //UTC ms resolution
@@ -115,7 +113,8 @@ Last-will testamanet when disconnecting from broker
 Object classifictions is published when installed on a camera with ARTPEC-7 running firmware 9.20 or later.
 ```
 {
-  source: string,       //MQTT Client ID
+  device: string,       //Device Serial number
+  client: string,       //MQTT Client ID
   id: number,           //Unique tracker ID if "motion required" is set.  Otherwise 0
   timestamp: number,    //UTC ms resolution
   x: number,            // X coordinate [left to right 0 – 1000]
