@@ -1,4 +1,4 @@
-# Publisher 1.1.1
+# Publisher 1.2-0
 An ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server with simple and usable payloads.
 
 # Overview
