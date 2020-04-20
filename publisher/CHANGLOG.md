@@ -1,3 +1,8 @@
+## 1.3-0
+* Add MQTT
+* Added payload property "name" for user-defined names
+* Changed property "device" to only include device serial number
+
 ## 1.2-1
 * Added property localTime that can be used when data is displayed in a table
 * Added property clock that represents clock in the form of seconds after midnight.  This can be used when querying data for multiple days but filter on timestamps that are between e.g. 08:15 - 11:30
