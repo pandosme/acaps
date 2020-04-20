@@ -24,7 +24,7 @@ Set IP address or FQDN and port number.
 
 Examples
 ```
-  mqtt.server.com:1883"
+  mqtt.server.com:1883
   web.server.com/my/end/point
   influx.server.com:8086
 ```
@@ -36,7 +36,7 @@ Set the name of the database (only applicable for Influx).  Note that you need t
 ![home](pictures/data.PNG)
 
 ## Device Name
-Publish property/tag "name"
+A user device name (property=name)
 
 ## Data Producers
 * AXIS License Plate Verifier
