@@ -1,5 +1,5 @@
-# Publisher 1.2-1
-An ACAP that can publish data from Analytics ACAP directly to an Influx Database or a HTTP Server with simple and usable payloads.
+# Publisher 1.3-0
+An ACAP that can publish data from Analytics ACAP to MQTT, Influx Database or a HTTP Server with simple and usable payloads.
 
 # Overview
 Integerating data from one service to another can be done in different ways.  Publisher simplifies getting analytics data to Influx,
@@ -17,7 +17,7 @@ a time-series database.  This provides simplification for use-cases such as logg
 ![home](pictures/target.PNG)
 
 ## Target Type
-Select Influx or HTTP depending on what server you may have.  MQTT is not yet implemented.
+Select MQTT, Influx or HTTP depending on what server you may have.
 
 ## Address
 Set IP address or FQDN and port number.
@@ -35,17 +35,8 @@ Set the name of the database (only applicable for Influx).  Note that you need t
 
 ![home](pictures/data.PNG)
 
-## Device ID
-For Influx this will create a tag
-```
-device=theName
-```
-For HTTP this will create a property in the POST payload
-```
-{ 
-  "device": "theName",
-  ...
-```
+## Device Name
+Publish property/tag "name"
 
 ## Data Producers
 > The list of supported data producers will be extended in the future
