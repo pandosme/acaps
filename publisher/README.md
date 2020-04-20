@@ -24,9 +24,9 @@ Set IP address or FQDN and port number.
 
 Examples
 ```
-  web.server.com
+  mqtt.server.com:1883"
+  web.server.com/my/end/point
   influx.server.com:8086
-  10.11.12.13:50000
 ```
 ## Database
 Set the name of the database (only applicable for Influx).  Note that you need to create the database first.  Setting up an Influx server is easy with the [Influx Docker](https://hub.docker.com/_/influxdb).
@@ -39,71 +39,9 @@ Set the name of the database (only applicable for Influx).  Note that you need t
 Publish property/tag "name"
 
 ## Data Producers
-> The list of supported data producers will be extended in the future
-
-### AXIS License Plate Verifier
-Publish the captured license plate
-
-Influx
-```
-URL: http://address/write?db=myDatabase&precision=ms
-BODY: myTopic,device=camera1 plate="ABC123" 1586794095057
-```
-HTTP
-```
-URL: http://address
-BODY: {
-	"topic": "myTopic",
-	"device": "camera1"
-	"plate": "ABC123",
-	"timestamp":1586794095057
-}
-
-```
-
-## AXIS Direction Detector
-Publish when people are coming in ot leaving.
-
-Influx
-
-```
-URL: http://address/write?db=myDatabase&precision=ms
-BODY In: myTopic,device=camera1,direction=in value=1 1586793127914
-BODY Out: myTopic,device=camera1,direction=out value=-1 1586793127914
-```
-> Querying the sum of the value over a period of time will give occupancy.
-
-HTTP
-```
-URL: http://address
-BODY: {
-	"topic": "myTopic",
-	"device": "camera1"
-	"direction": "in" | "out",
-	"value": 1 | -1
-	"timestamp":1586794095057
-}
-
-```
-
-### AXIS Video Motion Detection
-Messages will only be sent on motion start as the primary use-case is logging, not controling actions.
-
-Influx
-```
-URL: http://address/write?db=myDatabase&precision=ms
-BODY: myTopic,device=camera1 value=1 1586793127914
-```
-HTTP
-```
-URL: http://address
-BODY: {
-	"topic": "myTopic",
-	"device": "camera1"
-	"value": 1
-	"timestamp":1586794095057
-}
-```
+* AXIS License Plate Verifier
+* AXIS Direction Detector
+* Axis Motion Detection (VMD)
 
 ### Topic
 For Influx the is the name of the Influx measurement that data will be stored.
