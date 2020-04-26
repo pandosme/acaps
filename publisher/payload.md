@@ -9,14 +9,20 @@ BODY: myTopic,device=ACCCxxxxx plate="ABC123" 1586794095057
 MQTT & HTTP
 ```
 {
-  "topic": "myTopic",
-  "device": "ACCCxxxxx",
-  "name": "Some Name"
-  "plate": "ABC123",
-  "image": null || base64,
-  "localTime": "2020-01-01 12:23:34",
-  "clock": Seconds from midnight
-  "timestamp":1586794095057
+  "tags":{
+    "name":"Kontoret",
+    "device":"ACCC8EE6CE55",
+    "direction":"in","location":"Sweden"
+   },
+   "values":{
+     "value":1
+   },
+   "timestamp":1587884249091,
+   "image":"JPEG base64 encoded" | null,
+   "database":"fred",
+   "topic":"direction",
+   "clock":32250,
+   "localTime":"2020-04-26 08:57:30"
 }
 ```
 
