@@ -1,4 +1,4 @@
-# Publisher 1.3-0
+# Publisher 2.0-0
 An ACAP that can publish data from Analytics ACAP to MQTT, Influx Database or a HTTP Server with simple and usable payloads.
 
 # Overview
