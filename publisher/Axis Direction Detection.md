@@ -14,14 +14,14 @@ timestamp: epoch/Unix timestamp
 
 ## Influx payload example
 ```
-someMeasurement,device=ACCCxxxxx,name=Camera1,direction=in value=1,image="null" 1587884000000
+direction,name=Office,device=ACCC8Exxxxxx,direction=out value=-1,clock=36360,localTime="2020-04-26 10:06:00" 1587888358061"
 ```
 
 ## HTTP and MQTT payload example
 ```
 {
   "tags":{
-    "name":"Camera1",
+    "name":"Office",
     "device":"ACCC8Exxxxx",
     "direction":"in"
    },
@@ -29,12 +29,12 @@ someMeasurement,device=ACCCxxxxx,name=Camera1,direction=in value=1,image="null" 
      "value":1
      "image": null
    },
-   "timestamp":1587884000000,
+   "timestamp":1587888358061,
    "image":"JPEG base64 encoded" | null,
    "database":"someDatabase",
    "topic":"direction",
-   "clock":32250,
-   "localTime":"2020-04-26 08:57:30"
+   "clock":36420,
+   "localTime":"2020-04-26 10:07:00"
 }
 ```
 
