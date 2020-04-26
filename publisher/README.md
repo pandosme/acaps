@@ -5,6 +5,10 @@ An ACAP that can publish data from Analytics ACAP to MQTT, Influx Database or a 
 Integerating data from one service to another can be done in different ways.  Publisher simplifies getting analytics data to Influx,
 a time-series database.  This provides simplification for use-cases such as logging, counting, data analysis and forensic search.
 
+## Supported platforms
+1. [mips.eap](https://github.com/pandosme/acaps/raw/master/publisher/mips.eap)
+2. [armv7hf.eap](https://github.com/pandosme/acaps/raw/master/publisher/armvh7hf.eap)
+
 # Requirements
 1. An Axis Camera
 2. Select, download and install the file (mips.eap or armv7hf.eap) depending on your camera.
@@ -30,7 +34,6 @@ Examples
 ```
 ## Database
 Set the name of the database (only applicable for Influx).  Note that you need to create the database first.  Setting up an Influx server is easy with the [Influx Docker](https://hub.docker.com/_/influxdb).
-
 
 
 ![home](pictures/data.PNG)
