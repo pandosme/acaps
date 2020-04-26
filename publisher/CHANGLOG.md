@@ -1,3 +1,8 @@
+## 2.0-0 [Breaking Change]
+It is recommeded to uninstall previous versions before installing
+* Fixed flaws in Influx payload
+* Modified payload for HTTP and MQTT be be more optimzed for databases
+
 ## 1.3-0
 * Add MQTT
 * Added payload property "name" for user-defined names
