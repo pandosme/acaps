@@ -1,9 +1,11 @@
 # Publisher 2.0-0
-An ACAP that can publish data from Analytics ACAP to MQTT, Influx Database or a HTTP Server with simple and usable payloads.
+Publisher is primarily targeting systems that needs to get event analytic payloads into a database.  Publisher can send data to MQTT Broker, Influx Database or a HTTP Server depending on the system environment.
 
-# Overview
-Integerating data from one service to another can be done in different ways.  Publisher simplifies getting analytics data to Influx,
-a time-series database.  This provides simplification for use-cases such as logging, counting, data analysis and forensic search.
+## Supported Analytics
+1. AXIS License Plate Verifyer
+2. AXIS Direction Detetor
+3. AXIS VMD4
+More will be added.
 
 ## Supported platforms
 1. [mips.eap](https://github.com/pandosme/acaps/raw/master/publisher/mips.eap)
@@ -11,10 +13,9 @@ a time-series database.  This provides simplification for use-cases such as logg
 
 # Requirements
 1. An Axis Camera
-2. Select, download and install the file (mips.eap or armv7hf.eap) depending on your camera.
-3. Any of the supported analytics intalled and running (see Data Producers)
-4. An Influx server or HTTP server that cameras can access.
-
+2. One of the supported Video Analytcs ACAP (Data Producer) installed and configured in the device
+3. Publisher installed and configured on the device
+4. An Influx server, HTTP server or MQTT Broker
 
 # Configuration
 
