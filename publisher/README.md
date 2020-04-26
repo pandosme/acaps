@@ -1,5 +1,5 @@
 # Publisher 2.0-0
-Publisher is primarily targeting systems that needs to get event analytic payloads into a database.  Publisher can send data to MQTT Broker, Influx Database or a HTTP Server depending on the system environment.
+Publisher is primarily targeting systems that needs to get event analytic payloads into a database.  A jpeg image, taken at detection time, can also be included in the data.  Publisher can send data to MQTT Broker, Influx Database or a HTTP Server depending on the system environment.
 
 ## Supported Analytics
 1. AXIS License Plate Verifyer
