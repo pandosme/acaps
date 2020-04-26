@@ -1,16 +1,16 @@
 # AXIS Direction Detection
 
 ## Tags
-device: "SERIAL NUMBER"
-name: "Device Nice Name"
-direction: "in" | "out"
-userTags: [OPTIONAL]
+- device: "SERIAL NUMBER"
+- name: "Device Nice Name"
+- direction: "in" | "out"
+- userTags: [OPTIONAL]
 
 ## Values
-value: 1 (in) or -1 (out)
-image: null or a base64 encoded JPEG
-clock: seconds since midnight
-timestamp: epoch/Unix timestamp
+- value: 1 (in) or -1 (out)
+- image: null or a base64 encoded JPEG
+- clock: seconds since midnight
+- timestamp: epoch/Unix timestamp
 
 ## Influx payload example
 ```
