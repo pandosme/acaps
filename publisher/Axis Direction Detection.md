@@ -1,5 +1,4 @@
 # AXIS Direction Detection
-Publish the captured license plate
 
 ## Tags
 device: "SERIAL NUMBER"
