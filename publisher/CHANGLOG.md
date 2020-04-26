@@ -1,7 +1,7 @@
 ## 2.0-0 [Breaking Change]
 It is recommeded to uninstall previous versions before installing
 * Fixed flaws in Influx payload
-* Modified payload for HTTP and MQTT be be more optimzed for databases
+* Modified payload for HTTP and MQTT be be more optimzed for database input
 
 ## 1.3-0
 * Add MQTT
