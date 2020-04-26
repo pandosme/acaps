@@ -34,7 +34,7 @@ Examples
   influx.server.com:8086
 ```
 ## Database
-Set the name of the database (only applicable for Influx).  Note that you need to create the database first.  Setting up an Influx server is easy with the [Influx Docker](https://hub.docker.com/_/influxdb).
+Set the name of the database.  Note that you need to create the database first.  Setting up an Influx server is easy with the [Influx Docker](https://hub.docker.com/_/influxdb).
 
 
 ![home](pictures/data.PNG)
