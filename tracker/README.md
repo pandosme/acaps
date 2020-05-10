@@ -44,7 +44,7 @@ Data structure is optimized for post-processing (Time Series Database).
 {
   "tags": {
     "client": string,            //MQTT Client name
-    "device":"ACCC8Exxxxxx"      //Device serial number
+    "device":string             //Device serial number
   }
   "values": {
     "timestamp": number,         //EPOCH timestamp ms resolution
@@ -67,12 +67,12 @@ Data structure is optimized for post-processing (Time Series Database).
     "pauseY": number,
     "pcx": number,               //Previous CX,CY.  Used for drawing path in live visualization
     "pcy": number,
-    "bx":342,                    //Birt x,y,w,h,cx,cy
-    "by":292,
-    "bw":647,
-    "bh":246,
-    "bcx":665,
-    "bcy":538
+    "bx": number,                    //Birt x,y,w,h,cx,cy
+    "by": number,
+    "bw": number,
+    "bh": number,
+    "bcx": number,
+    "bcy": number
   }
 }
 ```
