@@ -1,17 +1,25 @@
-## 1.3.0
+## 2.0-0
+Version 2 is optimzed for post processing of video analytics tracker data.  All other features has been removed and may appear in other future ACAP.
+- Tracker payload has a new structure
+- An image capture of birth detection may be included in the payload
+- Event publish is removed
+- Subscribe/Action is removed
+- Object classifications (ARTPEC-7) is removed
+
+## 1.3-0
 - Added property device to MQTT payload that contains the device serial number
 - Adjusted payload for topic connection (and LWT)
 
-## 1.2.8
+## 1.2-8
 - Minor fixes
 
-## 1.2.7
+## 1.2-7
 - Fixed crash for Axis D2050 Radar
 
-## 1.2.5
+## 1.2-5
 - Removed auto-subscription set/<client>/settings
 
-## 1.2.3
+## 1.2-3
 - Added Root Topic
 - Added Setting: image.publish to control publishing image on connect
   Images will not be automatically published by default on connect
