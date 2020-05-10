@@ -20,12 +20,7 @@ In many cases there are areas where there is no interest in tracking objects. Fi
 * Birth min distance:  Defines the distance a detected object needs to move before a birth message is posted.  Increase distance to reduce sporadic detections.
 * Min age, distance and spped is similar to Birth-settings.
 
-![filter](pictures/filter.png)sni
-
-## Monitor - MQTT Visualization
-In the monitor tab you can validate published data as bounding boxes and/or paths
-
-![home](pictures/monitor.png)
+![filter](pictures/filter.png)
 
 # MQTT Topics
 
