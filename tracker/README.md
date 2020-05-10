@@ -4,13 +4,17 @@ ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQT
 **Big breaking changes in 2.0-0.  Check changelog**
 
 ## MQTT Settings
-![home](pictures/home.png)
 
 Settnings should  pretty straight forward.  Note that only TCP/MQTT is support, not TLS nore WebSocket.
+
+![home](pictures/home.png)
+
 - Tracker Publish version defines the data structure for the structure.  Version 1 is deprecated and should only be used for integration. 
 
 ## Filter - Optimze the system
 In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
+
+![filter](pictures/filter.png)
 
 * Publish: Depending on use-case.  "Birht" and "Tracking" should be enabled fo real-time application (e.g. visualization). "Death" should be used for post-processing application.  An JPEG immage may also be included (in Death publish).
 * Treaacker Sway limit:  Redcues the number of publishing when tracking. THe object needs to move x% before an update is publioshed.   Recommeded value is 3%.
@@ -18,8 +22,6 @@ In many cases there are areas where there is no interest in tracking objects. Fi
 * Birht min age:  Defines the time between an object is detected and when a birth message is posted.  Increase time reduce sporadic detections.
 * Birth min distance:  Defines the distance a detected object needs to move before a birth message is posted.  Increase distance to reduce sporadic detections.
 * Min age, distance and spped is similar to Birth-settings.
-
-![filter](pictures/filter.png)
 
 
 
