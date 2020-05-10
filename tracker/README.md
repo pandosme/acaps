@@ -6,7 +6,6 @@ ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQT
 ## MQTT Settings
 ![home](pictures/home.png)
 
-## MQTT
 Settnings should  pretty straight forward.  Note that only TCP/MQTT is support, not TLS nore WebSocket.
 - Tracker Publish version defines the data structure for the structure.  Version 1 is deprecated and should only be used for integration. 
 
@@ -22,8 +21,9 @@ In many cases there are areas where there is no interest in tracking objects. Fi
 
 ![filter](pictures/filter.png)
 
-# MQTT Topics
 
+
+# MQTT Topics
 
 ### connect/MQTT_Client_ID [RETAINED]
 Last-will testamanet when disconnecting from broker
