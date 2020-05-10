@@ -14,16 +14,18 @@ Settnings should  pretty straight forward.  Note that only TCP/MQTT is support, 
 ## Filter - Optimze the system
 In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
 
+A birth message and tracking will start when an object is inside the birth area, is at least X seconds and traveled Y % distance.  Tracking objects will then be published until the object disapears from scene.
+
+A death object will be published after an object is born and fulfilled the death age, distance and max speed. 
+
 ![filter](pictures/filter.png)
 
-* Publish: Depending on use-case.  "Birht" and "Tracking" should be enabled fo real-time application (e.g. visualization). "Death" should be used for post-processing application.  An JPEG immage may also be included (in Death publish).
-* Treaacker Sway limit:  Redcues the number of publishing when tracking. THe object needs to move x% before an update is publioshed.   Recommeded value is 3%.
-* Birth area:  Defines an  area that the object needs to appear or pass before tracking starts.  Click the green button and use mouse to adjust area.
+* Publish: Depending on use-case.  "Birth" and "Tracking" should be enabled fo real-time applications (e.g. visualization). "Death" should be enabled used for post-processing application.  A JPEG image from birht detection may also be included in the Death message.
+* Tracker Sway limit:  Redcues the number of publishing when tracking. The object needs to move x% before an update is published.   Recommeded value is 3-5%.
+* Birth area:  Defines an  area that the object needs to pass before tracking starts.  Click the green button and use mouse to adjust area.
 * Birht min age:  Defines the time between an object is detected and when a birth message is posted.  Increase time reduce sporadic detections.
 * Birth min distance:  Defines the distance a detected object needs to move before a birth message is posted.  Increase distance to reduce sporadic detections.
-* Min age, distance and spped is similar to Birth-settings.
-
-
+* Min age, distance and speed is similar to Birth-settings.
 
 # MQTT Topics
 
