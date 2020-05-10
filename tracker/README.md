@@ -9,7 +9,7 @@ Settnings should  pretty straight forward.  Note that only TCP/MQTT is support, 
 
 ![home](pictures/home.png)
 
-- Tracker Publish version defines the data structure for the structure.  Version 1 is deprecated and should only be used for integration. 
+- Tracker Publish version defines the data structure for the structure.  Version 1 is deprecated and should only be selected if the use case requires it.  New integrations should use version 2. 
 
 ## Filter - Optimze the system
 In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
