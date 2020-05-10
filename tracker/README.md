@@ -1,4 +1,4 @@
-# Tracker 2.0.0
+# Tracker 2.0-0
 ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQTT. 
 
 **Big breaking changes in 2.0-0.  Check changelog**
