@@ -60,14 +60,14 @@ Data structure is optimized for post-processing (Time Series Database).
     "dx": number,                //Total X distance traveled since birht -1000 - 1000
     "dy": number,                //Total Y distance traveled since birht -1000 - 1000
     "age": number,               //Age in seconds since birth
-    "speed": number,             //Total distance in percent/per second
+    "speed": number,             //Total distance in percent/second
     "distance": number,          //Distance traveled in percent of view 
     "pause": number,             //The longest pause the object made while beining tracked
     "pauseX": number,            //Location of longest pause
     "pauseY": number,
     "pcx": number,               //Previous CX,CY.  Used for drawing path in live visualization
     "pcy": number,
-    "bx":342,                    //Birt x,y,w,h,cx,cy
+    "bx":342,                    //Birth x,y,w,h,cx,cy
     "by":292,
     "bw":647,
     "bh":246,
