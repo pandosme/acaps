@@ -1,4 +1,4 @@
-## 2.0-0
+## 2.0-1
 Version 2 is optimzed for post processing of video analytics tracker data.  All other features has been removed and may appear in other future ACAP.
 - Tracker payload has a new structure
 - An image capture of birth detection may be included in the payload
