@@ -5,7 +5,7 @@ ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQT
 
 ## MQTT Settings
 
-Settnings should  pretty straight forward.  Note that only TCP/MQTT is support, not TLS nore WebSocket.
+Settnings should  pretty straight forward.  Note that secure TLS are not supported.  It is primarily desinged for local brokers.
 
 ![home](pictures/home.png)
 
@@ -16,7 +16,7 @@ In many cases there are areas where there is no interest in tracking objects. Fi
 
 A birth message and tracking will start when an object is inside the birth area, is at least X seconds and traveled Y % distance.  Tracking objects will then be published until the object disapears from scene.
 
-A death object will be published after an object is born and fulfilled the death age, distance and max speed. 
+A death object will only be published when all filters are fulfilled including minimum age, distance and max speed. 
 
 ![filter](pictures/filter.png)
 
