@@ -48,7 +48,6 @@ Data structure is optimized for post-processing (Time Series Database).
   }
   "values": {
     "timestamp": number,         //EPOCH timestamp ms resolution
-    "birth": number,             //When object was born
     "phase": number,             //0 = new object detected, 1 = object is tracked, 2 = object left scene (dead)
     "id": number,                //Unique tracking ID for each object being tracked
     "x": number,                 //Bounding box x,y,w,h
@@ -57,8 +56,8 @@ Data structure is optimized for post-processing (Time Series Database).
     "h": number,
     "cx": number,                //Center of gravity 
     "cy": number,         
-    "dx": number,                //Total X distance traveled since birht -1000 - 1000
-    "dy": number,                //Total Y distance traveled since birht -1000 - 1000
+    "dx": number,                //Total X distance traveled since birth [-1000,1000]
+    "dy": number,                //Total Y distance traveled since birth [-1000,1000]
     "age": number,               //Age in seconds since birth
     "speed": number,             //Total distance in percent/second
     "distance": number,          //Distance traveled in percent of view 
@@ -67,12 +66,13 @@ Data structure is optimized for post-processing (Time Series Database).
     "pauseY": number,
     "pcx": number,               //Previous CX,CY.  Used for drawing path in live visualization
     "pcy": number,
-    "bx":342,                    //Birth x,y,w,h,cx,cy
-    "by":292,
-    "bw":647,
-    "bh":246,
-    "bcx":665,
-    "bcy":538
+    "birth": number,             //When object was born.  EPOCH timestamp ms resolution
+    "bx":number,                 //Birth x,y
+    "by":number,                 
+    "bw":number,                 //Birth width & height
+    "bh":number,
+    "bcx":number,                //Birth center of gravity cx,cy
+    "bcy":number
   }
 }
 ```
