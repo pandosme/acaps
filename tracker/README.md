@@ -44,7 +44,7 @@ Data structure is optimized for post-processing (Time Series Database).
 {
   "tags": {
     "client": string,            //MQTT Client name
-    "device":"ACCC8Exxxxxx"      //Device serial number
+    "device": string             //Device serial number
   }
   "values": {
     "timestamp": number,         //EPOCH timestamp ms resolution
