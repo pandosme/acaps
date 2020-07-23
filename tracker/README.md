@@ -3,11 +3,22 @@ ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQT
 
 ## MQTT Settings
 
-Settnings should  pretty straight forward.  Note that secure TLS are not supported.  It is primarily desinged for local brokers.
+Settnings should pretty straight forward.
 
-![home](pictures/home.png)
+![home](pictures/tracker_home.png)
 
-- Tracker Publish version defines the data structure for the structure.  Version 1 is deprecated and should only be selected if the use case requires it.  New integrations should use version 2. 
+## MQTT Data settings
+### Send birth objects
+ Sends message when a new object is detected in the scene that fulfills the birht criteria.  Should be disabled if there are no consumer that requires real-time data.
+
+### Send tracking objects
+Sends object update when object moves more than Tracker Sway limit.  Should be disabled if there are no consumer that requires real-time data.
+
+### Send complete tracking objects
+After an object left the scene (object death), a message will be send containing birht and deat information.  This is typically used when detected objects are store in a database.  
+
+### Include image in complete objects
+Include a JPEG image in the last message (complete tracking) message.  The data will be base64 encoded.
 
 ## Filter - Optimze the system
 In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
@@ -18,33 +29,18 @@ A death object will only be published when all filters are fulfilled including m
 
 ![filter](pictures/filter.png)
 
-* Publish: Depending on use-case.  "Birth" and "Tracking" should be enabled fo real-time applications (e.g. visualization). "Death" should be enabled used for post-processing application.  A JPEG image from birht detection may also be included in the Death message.
 * Tracker Sway limit:  Redcues the number of publishing when tracking. The object needs to move x% before an update is published.   Recommeded value is 3-5%.
 * Birth area:  Defines an  area that the object needs to pass before tracking starts.  Click the green button and use mouse to adjust area.
 * Birht min age:  Defines the time between an object is detected and when a birth message is posted.  Increase time reduce sporadic detections.
 * Birth min distance:  Defines the distance a detected object needs to move before a birth message is posted.  Increase distance to reduce sporadic detections.
 * Min age, distance and speed is similar to Birth-settings.
 
-# MQTT Topics
-
-### connect/MQTT_Client_ID [RETAINED]
-Last-will testamanet when disconnecting from broker
+## Payload
+Data structure depends on user selection but will contain the following.
 ```
 {
-  connected: false,
-  client: string,          //MQTT client ID
-  serial: string,          //Example "ACCCxxxxxxx"
-}
-```
-### tracker
-Data structure is optimized for post-processing (Time Series Database).
-```
-{
-  "tags": {
     "client": string,            //MQTT Client name
     "device": string             //Device serial number
-  }
-  "values": {
     "timestamp": number,         //EPOCH timestamp ms resolution
     "phase": number,             //0 = new object detected, 1 = object is tracked, 2 = object left scene (dead)
     "id": number,                //Unique tracking ID for each object being tracked
@@ -71,6 +67,5 @@ Data structure is optimized for post-processing (Time Series Database).
     "bh":number,
     "bcx":number,                //Birth center of gravity cx,cy
     "bcy":number
-  }
 }
 ```
