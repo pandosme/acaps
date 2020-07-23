@@ -1,3 +1,7 @@
+## 2.5-0
+- Support for TLS w/o client certificates
+- UI restructuring
+
 ## 2.0-1
 Version 2 is optimzed for post processing of video analytics tracker data.  All other features has been removed and may appear in other future ACAP.
 - Tracker payload has a new structure
