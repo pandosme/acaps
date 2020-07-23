@@ -26,7 +26,7 @@ After an object left the scene (object death), a message will be send containing
 ### Include image in complete objects
 Include a JPEG image in the last message (complete tracking) message.  The data will be base64 encoded.
 
-## Filter - Optimze the system
+## Object Filter (Optimze the system)
 In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
 
 A birth message and tracking will start when an object is inside the birth area, is at least X seconds and traveled Y % distance.  Tracking objects will then be published until the object disapears from scene.
@@ -40,6 +40,9 @@ A death object will only be published when all filters are fulfilled including m
 * Birht min age:  Defines the time between an object is detected and when a birth message is posted.  Increase time reduce sporadic detections.
 * Birth min distance:  Defines the distance a detected object needs to move before a birth message is posted.  Increase distance to reduce sporadic detections.
 * Min age, distance and speed is similar to Birth-settings.
+
+## TLS Certificates
+If the MQTT Broker requires client certificate, upload them here.
 
 ## Payload
 Data structure depends on user selection but will contain the following.
