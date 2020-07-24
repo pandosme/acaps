@@ -3,7 +3,7 @@ ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQT
 
 ## Download ACAP file to install in Axis Camera (based on camera hw platform)
 - [MIPS](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_mips.eap)
-- [ARMv7](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_amrv7hf.eap)
+- [ARMv7hf](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_armv7hf.eap)
 - [AARCH64](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_aarch64.eap)
 
 
