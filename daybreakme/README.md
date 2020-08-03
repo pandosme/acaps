@@ -1,5 +1,5 @@
 # Daybreak Me
-ACAP for Axis Cameras that generates  events on dawn, sunrise, sun noon, sunset, dawn and midnight. The typical use case is to adjust camera settings based on day/night.  The sun events can also be used as trigger for device actions.
+ACAP for Axis Cameras that generates  events on dawn, sunrise, sun noon, sunset, dawn and midnight. The typical use case is to adjust camera settings based on day/night.  The sun events can also be used as trigger device actions.
 
 ![home](pictures/home.png)
 
@@ -12,7 +12,7 @@ ACAP for Axis Cameras that generates  events on dawn, sunrise, sun noon, sunset,
 # Settings
 
 ## Location
-Use mouse to move the marker to the city where the camera is mounted.  Note that if the client browser does not have Interner access you will need to manually set the GPS coordinates.
+Use the mouse to move the marker to the city where the camera is mounted.  Note that if the client browser does not have Internet access you will need to manually set the GPS coordinates (additional inputs will be shown).
 
 ## Device time
 Make sure the the cameras time zone, DST is correctly set.
