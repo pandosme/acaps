@@ -5,7 +5,7 @@ The following are some simple flow examples how to use Tracker for various tasks
 
 # MQTT Broker
 It is assumed that you have a MQTT broker.  A number of options.
-- Install a local [Mosquitto]() MQTT broker on Windows, Linux, RasPi...
+- Install a local [Mosquitto](https://mosquitto.org/) MQTT broker on Windows, Linux, RasPi...
 - Install a local [MQTT broker](https://flows.nodered.org/node/node-red-contrib-aedes) node in Node-Red.
 - Setup a paid account on [CloudMQTT](https://www.cloudmqtt.com/), [IBM Blumix](https://cloud.ibm.com), or any other MQTT provers
 - Use [HIVEMQ free public broker](https://www.hivemq.com/public-mqtt-broker) by connecting to address broker.hivemq.com:1883 (no user/password required)
