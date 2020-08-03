@@ -1,7 +1,7 @@
 # Node-Red examples
-[Node-Red](https://nodered.org) is a simple and fantastic web-based tool to integrate anything with everything with limited programming skills.  With a the node-Red dashborad you can easily build web applications and web services.  If you are not familiar with node-red, watch the video on their home page.
+[Node-Red](https://nodered.org) is a simple and fantastic web-based tool to integrate anything with everything.  You do not need to be a software developer.  With a the node-Red dashborad you can easily build web applications and web services.  If you are not familiar with node-red, watch the video on their home page.
 
-It is assumed that you have a MQTT broker.  If not, you use Node-Red as your MQTT broker by installing the [MQTT broker](https://flows.nodered.org/node/node-red-contrib-aedes) node.
+It is assumed that you have a MQTT broker.  If not, you use Node-Red as your Node-Red by installing the [MQTT broker](https://flows.nodered.org/node/node-red-contrib-aedes) node.
 
 The following are some simple flow examples how to use Tracker for various tasks.
 
