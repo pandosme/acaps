@@ -10,8 +10,12 @@ The following example collects tracker data, filters on objects going downwords 
 [Copy the flow](flows/filter.json) and import into your node red.
 
 ## Dashboard visualizations
+Takes  snapshot of the camera and display bounding boxes and paths of objects passing the scene.
 
 ![home](pictures/visualize.png)
 
-## Loggin to Influx Dabase
+You need to install the following additional nodes into you Node-Red. Click the 3-line-icon top right and select Manage Pallet, click install and write
+- [node-red-contrib-axis-camera](https://flows.nodered.org/node/node-red-contrib-axis-camera)
+- [node-red-dashboard](https://flows.nodered.org/node/node-red-dashboard)
 
+[Copy the flow](flows/visualization.json) and import into your node red.
