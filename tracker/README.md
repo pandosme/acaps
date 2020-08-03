@@ -1,5 +1,19 @@
 # Tracker
-ACAP for Axis Camera & Radar that publish events, motion & radar trackers on MQTT. 
+ACAP for Axis Cameras that publish motion analytics trackers on MQTT. This ACAP targets system integrators and application developers.
+
+## Use cases
+- Log all moving object (their motion path in scene) with or without image capture
+- Build unique motion detection filters based on object age, direction, birth/death location and speed
+- Add analytics bounding box in clients
+
+See usage examples furter down.
+
+## Node-Red exampel
+Filter only on objects moving downwards that are at least 5 seconds old
+
+
+
+
 
 ## Download ACAP file to install in Axis Camera (based on camera hw platform)
 - [MIPS](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_mips.eap)
