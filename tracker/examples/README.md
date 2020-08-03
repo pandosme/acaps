@@ -4,11 +4,11 @@
 The following are some simple flow examples how to use Tracker for various tasks.
 
 # MQTT Broker
-It is assumed that you have a MQTT broker.  A number of options.
+It is assumed that you have a MQTT broker.  If not, you have a number of options:
 - Install a local [Mosquitto](https://mosquitto.org/) MQTT broker on Windows, Linux, RasPi...
 - Install a local [MQTT broker](https://flows.nodered.org/node/node-red-contrib-aedes) node in Node-Red.
 - Setup a paid account on [CloudMQTT](https://www.cloudmqtt.com/), [IBM Blumix](https://cloud.ibm.com), or any other MQTT provers
-- Use [HIVEMQ free public broker](https://www.hivemq.com/public-mqtt-broker) by connecting to address broker.hivemq.com:1883 (no user/password required)
+- Use [HIVEMQ free public broker](https://www.hivemq.com/public-mqtt-broker) by connecting to address broker.hivemq.com:1883 (no user/password required).  Note that everyone else will be able to subscribe to what you publish.
 
 ## Basic motion filter
 The following example collects tracker data, filters on objects going downwords with an age of at least 5 seconds.
