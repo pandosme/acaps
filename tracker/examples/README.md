@@ -1,7 +1,9 @@
 # Node-Red examples
 [Node-Red]() is a simple and fantastic web-based tool to integrate anything with everything with limited programming skills.  With a the node-Red dashborad you can easily build web applications and web services.
 
-The following are som simple flow examples how to use Tracker for various tasks.
+It is assumed that you have a MQTT broker.  If not, you can use Node-Red as your [MQTT broker](https://flows.nodered.org/node/node-red-contrib-aedes).
+
+The following are some simple flow examples how to use Tracker for various tasks.
 
 ## Basic motion filter
 The following example collects tracker data, filters on objects going downwords with an age of at least 5 seconds.
@@ -10,7 +12,7 @@ The following example collects tracker data, filters on objects going downwords 
 [Copy the flow](flows/filter.json) and import into your node red.
 
 ## Dashboard visualizations
-Takes  snapshot of the camera and display bounding boxes and paths of objects passing the scene.
+Takes  snapshot of the camera and display bounding boxes and paths (in real-time) of objects passing the scene.
 
 ![home](pictures/visualize.png)
 
