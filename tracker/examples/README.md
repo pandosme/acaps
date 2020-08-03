@@ -1,9 +1,14 @@
 # Node-Red examples
 [Node-Red](https://nodered.org) is a simple and fantastic web-based tool to integrate anything with everything.  You do not need to be a software developer.  With a the node-Red dashborad you can easily build web applications and web services.  If you are not familiar with node-red, watch the video on their home page.
 
-It is assumed that you have a MQTT broker.  If not, you use Node-Red as your Node-Red by installing the [MQTT broker](https://flows.nodered.org/node/node-red-contrib-aedes) node.
-
 The following are some simple flow examples how to use Tracker for various tasks.
+
+# MQTT Broker
+It is assumed that you have a MQTT broker.  A number of options.
+- Install a local [Mosquitto]() MQTT broker on Windows, Linux, RasPi...
+- Install a local [MQTT broker](https://flows.nodered.org/node/node-red-contrib-aedes) node in Node-Red.
+- Setup a paid account on [CloudMQTT](https://www.cloudmqtt.com/), [IBM Blumix](https://cloud.ibm.com), or any other MQTT provers
+- Use [HIVEMQ free public broker](https://www.hivemq.com/public-mqtt-broker) by connecting to address broker.hivemq.com:1883 (no user/password required)
 
 ## Basic motion filter
 The following example collects tracker data, filters on objects going downwords with an age of at least 5 seconds.
