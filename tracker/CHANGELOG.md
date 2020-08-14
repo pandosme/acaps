@@ -1,3 +1,9 @@
+## 2.6-0
+- Added support for AXIS D2050 Radar
+- JSON Payload is now always flat.  Removed the user selection of JSON structure.
+- Added ability to set user properties for payload.  Typpical used for "nide name" and  "locatiion".
+- Added Web client to visualize the tracker data.  The web client needs to connect to the Broker  WebSocket port.
+
 ## 2.5-0
 - Support for TLS w/o client certificates
 - UI restructuring

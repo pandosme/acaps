@@ -10,9 +10,9 @@ ACAP for Axis Cameras that publish motion analytics trackers on MQTT. This ACAP 
 
 ## Download ACAP file to install in Axis Camera (based on camera hw platform)
 Note that the camera firmware needs to be version 10.0.0 or later.
-- [MIPS](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_mips.eap)
-- [ARMv7hf](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_armv7hf.eap)
-- [AARCH64](https://github.com/pandosme/acaps/raw/master/tracker/Tracker_aarch64.eap)
+- [MIPS](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_0_mips.eap)
+- [ARMv7hf](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_0_armv7hf.eap)
+- [AARCH64](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_0_aarch64.eap)
 
 
 # Settings
