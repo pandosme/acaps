@@ -11,7 +11,7 @@ ACAP for Axis Cameras and AXIS D2050 radar that publish motion trackers on MQTT.
 [Node-Red examples](https://github.com/pandosme/acaps/tree/master/tracker/examples)
 
 ## Download ACAP file to install in Axis Camera (based on camera hw platform)
-Note that the camera firmware needs to be version 10.0.0 or later.
+Note that the camera firmware needs to be version 9.80.0 or later.
 - [MIPS](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_0_mips.eap)
 - [ARMv7hf](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_0_armv7hf.eap)
 - [AARCH64](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_0_aarch64.eap)
@@ -93,3 +93,19 @@ Data structure depends on user selection but will contain the following.
     "bcy":number
 }
 ```
+
+whe used on an Axis Radar, the additional data will be included
+```
+  "radar": {
+    “speed”: number,
+    “direction”: number,
+    “distance”: number,
+    “angle”: number,
+    “class”: number
+  }
+```
+Speed: Object speed in meter/second
+Direction:  Object direction angle in degrees -180 to 180 where 0 is direction towards the radar
+Distance:  Distance in meter between object and radar
+Angle: The location angle of the object related to the radar direction (-180 to 180)
+Class:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.  Note that Classification is a bit unpredictable.
