@@ -1,5 +1,7 @@
 # Tracker
-ACAP for Axis Cameras that publish motion analytics trackers on MQTT. This ACAP targets system integrators and application developers.
+ACAP for Axis Cameras and AXIS D2050 radar that publish motion trackers on MQTT. This ACAP targets system integrators and application developers.
+
+![home](pictures/tracker_home.png)
 
 ## Use cases
 - Build unique motion detection filters based on object age, direction, birth/death location and speed
@@ -16,8 +18,6 @@ Note that the camera firmware needs to be version 10.0.0 or later.
 
 
 # Settings
-
-![home](pictures/tracker_home.png)
 
 ## MQTT Broker
 Settnings should pretty straight forward.
