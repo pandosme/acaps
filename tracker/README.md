@@ -22,20 +22,26 @@ Note that the camera firmware needs to be version 10.0.0 or later.
 ## MQTT Broker
 Settnings should pretty straight forward.
 
+### Open Web Client
+Opens a new page that has an MQTT client that can be used to visualize tracking data and JSON payload.  The web client needs to connect to the MQTT Broker WebSocket port.  Visualizing is primarily to validate things are working and as a tool to optimize filters.
+
 ## MQTT Data settings
-### Send birth objects
+### Publish birth objects
  Sends message when a new object is detected in the scene that fulfills the birht criteria.  Should be disabled if there are no consumer that requires real-time data.
 
-### Send tracking objects
+### Publish continous tracking
 Sends object update when object moves more than Tracker Sway limit.  Should be disabled if there are no consumer that requires real-time data.
 
-### Send complete tracking objects
+### Publish tracking complete
 After an object left the scene (object death), a message will be send containing birht and deat information.  This is typically used when detected objects are store in a database.  
 
-### Include image in complete objects
-Include a JPEG image in the last message (complete tracking) message.  The data will be base64 encoded.
+### Include birth image
+Include a JPEG image in the last message (complete tracking) message.  The image will be base64 encoded.
 
-## Object Filter (Optimze the system)
+### Additional tags (optional)
+Add custom JSON properties:values that will be included in the payload.  This is typically used for setting "nice name", "location" or other infomration when dealing with more than than one camera in the system.
+
+## MENU: Object Filter (Optimze the system)
 In many cases there are areas where there is no interest in tracking objects. Filtering unnessessery data will optimize the system perfomance.  On the filter tab you can define an area where objectes needs to appear (Birth Area), how old they need to be and how often objects are published. 
 
 A birth message and tracking will start when an object is inside the birth area, is at least X seconds and traveled Y % distance.  Tracking objects will then be published until the object disapears from scene.
