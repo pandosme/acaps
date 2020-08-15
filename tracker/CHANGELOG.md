@@ -1,3 +1,6 @@
+## 2.6-1
+- Fixed bug (introduced in 2.6-0) that prevented images from being published.
+
 ## 2.6-0
 - Added support for AXIS D2050 Radar
 - JSON Payload is now always flat.  Removed the user selection of JSON structure.
