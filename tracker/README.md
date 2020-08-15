@@ -104,8 +104,9 @@ whe used on an Axis Radar, the additional data will be included
     “class”: number
   }
 ```
-Speed: Object speed in meter/second
-Direction:  Object direction angle in degrees -180 to 180 where 0 is direction towards the radar
-Distance:  Distance in meter between object and radar
-Angle: The location angle of the object related to the radar direction (-180 to 180)
-Class:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.  Note that Classification is a bit unpredictable.
+- Speed: Object speed in meter/second
+- Direction:  Object direction angle in degrees -180 to 180 where 0 is direction towards the radar
+- Distance:  Distance in meter between object and radar
+- Angle: The location angle of the object related to the radar direction (-180 to 180)
+- Class:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.  Note that Classification is a bit unpredictable.
+
