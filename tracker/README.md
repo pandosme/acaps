@@ -5,8 +5,8 @@ ACAP for Axis Cameras and AXIS D2050 radar that publish motion trackers on MQTT.
 
 ## Use cases
 - Build unique motion detection filters based on object age, direction, birth/death location and speed
-- Log all moving object (their motion path in scene) with or without image capture
-- Add analytics bounding box in clients
+- Log or count all moving object (their motion path in scene) with or without image capture
+- Add visual augmentation in clients
 
 [Node-Red examples](https://github.com/pandosme/acaps/tree/master/tracker/examples)
 
