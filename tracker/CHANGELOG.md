@@ -1,3 +1,6 @@
+## 2.6-2
+- Fixed a bug that reset the publish checkboxes when saving filters.
+
 ## 2.6-1
 - Fixed bug (introduced in 2.6-0) that prevented images from being published.
 
