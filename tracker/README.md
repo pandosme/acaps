@@ -25,6 +25,8 @@ Settnings should pretty straight forward.
 ### Open Web Client
 Opens a new page that has an MQTT client that can be used to visualize tracking data and JSON payload.  The web client needs to connect to the MQTT Broker WebSocket port.  Visualizing is primarily to validate things are working and as a tool to optimize filters.
 
+![home](pictures/tracker-monitor.png)
+
 ## MQTT Data settings
 ### Publish birth objects
  Sends message when a new object is detected in the scene that fulfills the birht criteria.  Should be disabled if there are no consumer that requires real-time data.
