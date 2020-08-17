@@ -26,6 +26,7 @@ Settnings should pretty straight forward.
 Opens a new page that has an MQTT client that can be used to visualize tracking data and JSON payload.  The web client needs to connect to the MQTT Broker WebSocket port.  Visualizing is primarily to validate things are working and as a tool to optimize filters.
 
 ![home](pictures/tracker-monitor.png)
+
 *Green boxes are birth objects, red are death objects and line is continous tracking without boxes.*
 
 ## MQTT Data settings
