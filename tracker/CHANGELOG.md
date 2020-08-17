@@ -1,15 +1,14 @@
-## 2.6-2
-- Fixed a bug that reset the publish checkboxes when saving filters.
-
-## 2.6-1
-- Fixed bug (introduced in 2.6-0) that prevented images from being published.
+## 2.6-3
+- Fixed a bug that reset the publish checkboxes when saving filters
+- Fixed a bug that only sent a birth object when image publish was enabled
+- Fixed bug that impactred image publishing
 
 ## 2.6-0
 - Added support for AXIS D2050 Radar
 - JSON Payload is now always flat.  Removed the user selection of JSON structure.
-- Added ability to set user properties for payload.  Typpical used for "nide name" and  "locatiion".
-- Added Web client to visualize the tracker data.  The web client needs to connect to the Broker  WebSocket port.
-- Added support for Object classification "human" and "vehicles" (requires ARTPEC-7 devices).
+- Added ability to set user properties for payload.  Typpical used for "nide name" and  "locatiion"
+- Added Web client to visualize the tracker data.  The web client needs to connect to the Broker  WebSocket port
+- Added support for Object classification "human" and "vehicles" (requires ARTPEC-7 devices)
 
 ## 2.5-0
 - Support for TLS w/o client certificates
