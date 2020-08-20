@@ -5,17 +5,11 @@ Axis Camera ACAP that produces timelapse videos (AVI) triggered by timer, camera
 ## Download
 [View change log](https://github.com/pandosme/acaps/tree/master/timelapse/files/CHANGELOG.md)
 
-<<<<<<< HEAD
 - [MIPS](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_1_mips.eap)
 - [ARMv7hf](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_1_armv7hf.eap)
 - [AARCH64](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_1_aarch64.eap)
-=======
-Select the correct file based on the HW platform of the camera
-- [MIPS](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_0_mips.eap)
-- [ARMv7hf](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_0_armv7hf.eap)
-- [AARCH64](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_0_aarch64.eap)
->>>>>>> c17bd3069ccc14be1e522f40d4c52cdd275f6d96
 
+Select the correct file based on the HW platform of the camera
 
 ## Creating Timelapse
 You can have a number of simultaneous timelpase recordings at the same time.  Note that at least three images needs to be in a recording  before the recording is show in the recording list.
