@@ -2,9 +2,10 @@
 Axis Camera ACAP that produces timelapse videos (AVI) triggered by timer, camera events or on sun noon.
 
 
-## Download ACAP file to install in Axis Camera (based on camera hw platform)
+## Download
 [View change log](https://github.com/pandosme/acaps/tree/master/timelapse/files/CHANGELOG.md)
 
+Select the correct file based on the HW platform of the camera
 - [MIPS](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_0_mips.eap)
 - [ARMv7hf](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_0_armv7hf.eap)
 - [AARCH64](https://github.com/pandosme/acaps/raw/master/timelapse/files/Timelapse_Me_20_8_0_aarch64.eap)
