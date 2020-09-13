@@ -1,7 +1,7 @@
 ## 2.6-3
 - Fixed a bug that reset the publish checkboxes when saving filters
 - Fixed a bug that only sent a birth object when image publish was enabled
-- Fixed bug that impactred image publishing
+- Fixed bug that impacted image publishing
 
 ## 2.6-0
 - Added support for AXIS D2050 Radar
