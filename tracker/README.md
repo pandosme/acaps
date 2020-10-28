@@ -13,7 +13,7 @@ ACAP for Axis Cameras and AXIS D2050 radar that publish motion trackers on MQTT.
 ## Download ACAP file to install in Axis Camera (based on camera hw platform)
 Note that the camera firmware needs to be version 9.80.0 or later.
 - [MIPS](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_3_mips.eap)
-- [ARMv7hf](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_3_armv7hf.eap)
+- [ARMv7hf](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_4_armv7hf.eap)
 - [AARCH64](https://github.com/pandosme/acaps/raw/master/tracker/files/Tracker_2_6_3_aarch64.eap)
 
 
