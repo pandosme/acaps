@@ -1,5 +1,5 @@
 ## 2.6.4
-- Added support for radar AXIS D2110-VE (only applicaple for platforma ARMv7hf)
+- Added support for radar AXIS D2110-VE (only applicaple for platform ARMv7hf)
 
 ## 2.6-3
 - Fixed a bug that reset the publish checkboxes when saving filters
