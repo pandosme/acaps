@@ -62,7 +62,7 @@ A death object will only be published when all filters are fulfilled including m
 ## TLS Certificates
 If the MQTT Broker requires client certificate, upload them here.
 
-## Payload
+## Tracker Payload
 Data structure depends on user selection but will contain the following.
 ```
 {
@@ -97,7 +97,7 @@ Data structure depends on user selection but will contain the following.
 }
 ```
 
-whe used on an Axis Radar, the additional data will be included
+when used on an Axis Radar, the additional data will be included
 ```
   "radar": {
     “speed”: number,
@@ -113,3 +113,25 @@ whe used on an Axis Radar, the additional data will be included
 - Angle: The location angle of the object related to the radar direction (-180 to 180)
 - Class:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.  Note that Classification is a bit unpredictable.
 
+## Classification payload
+All classified objects are included in property list.  (Not avaialbel on Axis Radar)
+```
+{
+  "list":[
+    {
+      "timestamp": number        //EPOCH timestamp ms resolution
+      "x": number,               //Bounding box x,y,w,h
+      "y": number,               //Coordinate system is [0,0]-[1000,1000].  [0,0] is top left corner
+      "w": number,
+      "h": number,
+      "cx": number,              //Center of gravity X,Y (center bottom of object)
+      "cy": number,              
+      "c": number,               //Some level confidence
+      "class": string            //"vehicle" or "human" 
+    },
+    ...
+  ],
+  "client": string,              //MQTT client name
+  "device": string               //Device serial number
+}
+```
