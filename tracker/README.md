@@ -19,7 +19,7 @@ Note that the camera firmware needs to be version 9.80.0 or later.
 # Settings
 
 ## MQTT Broker
-Settnings should pretty straight forward.
+MQTT settnings should be pretty straight forward.
 
 ### Open Web Client
 Opens a new page that has an MQTT client that can be used to visualize tracking data and JSON payload.  The web client needs to connect to the MQTT Broker WebSocket port.  Visualizing is primarily to validate things are working and as a tool to optimize filters.
