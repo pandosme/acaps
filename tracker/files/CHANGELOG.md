@@ -1,3 +1,6 @@
+## 2.7.1
+* Support for Axis Radar FW that switch data channel from 1 to 0
+
 ## 2.7.0
 * Added MQTT publish for object classification (vehicles & humans).  Publishing can be controlled in the new menu option "Classifictions"
 
