@@ -1,7 +1,7 @@
 # Tracker
 ACAP for Axis Cameras and AXIS D2050 radar that publish motion trackers on MQTT. This ACAP targets system integrators and application developers.
 
-![home](pictures/tracker_home.png)
+![home](https://github.com/pandosme/acaps/raw/master/tracker/pictures/home.png)
 
 ## Use cases
 - Build unique motion detection filters based on object age, direction, birth/death location and speed
@@ -24,7 +24,7 @@ MQTT settnings should be pretty straight forward.
 ### Open Web Client
 Opens a new page that has an MQTT client that can be used to visualize tracking data and JSON payload.  The web client needs to connect to the MQTT Broker WebSocket port.  Visualizing is primarily to validate things are working and as a tool to optimize filters.
 
-![home](pictures/tracker-monitor.png)
+![home](https://github.com/pandosme/acaps/raw/master/tracker/pictures/tracker-monitor.png)
 
 *Green boxes are birth objects, red are death objects and line is continous tracking without boxes.*
 
@@ -51,7 +51,7 @@ A birth message and tracking will start when an object is inside the birth area,
 
 A death object will only be published when all filters are fulfilled including minimum age, distance and max speed. 
 
-![filter](pictures/filter.png)
+![filter](https://github.com/pandosme/acaps/raw/master/tracker/pictures/filter.png)
 
 * Tracker Sway limit:  Redcues the number of publishing when tracking. The object needs to move x% before an update is published.   Recommeded value is 3-5%.
 * Birth area:  Defines an  area that the object needs to pass before tracking starts.  Click the green button and use mouse to adjust area.
