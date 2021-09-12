@@ -10,7 +10,7 @@ Install appropriate EAP-file depending on your device paltform
 Should be pretty stright forward.
 
 ### Additional payload properties
-Name and Location will be included in every payload as "name" and "location" if they contain any user free-text string.
+Name and Location will be included in every payload as "name" and "location" if they contain any user defined text string.
 Select format for property "timestamp".  Either EPOCH (milli seconds since Jan 1 1970) is ISO (YYYY-MM-DDTHH:MM:SS+Zone-offset)
 
 ## Common topics
