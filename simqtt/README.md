@@ -4,7 +4,7 @@ An MQTT Client for Axis devices that simplifies monitoring events over MQTT. All
 
 ## Installation
 
-Install appropriate EAP-file depending on your device paltform
+Install SIMQTT for devices with firmware 10.x.x or later.  Install SIMQTT_Legacy for devices with firmware less  than 10.x.x. _SIMQTT Legacy does not support TLS connections._
 
 ### MQTT Broker
 Should be pretty stright forward.
