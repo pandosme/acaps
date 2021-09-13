@@ -4,7 +4,7 @@ An MQTT Client for Axis devices that simplifies monitoring events over MQTT. All
 
 ## Installation
 
-Install SIMQTT for devices with firmware 10.x.x or later.  Install SIMQTT_Legacy for devices with firmware less  than 10.x.x. _Note that SIMQTT Legacy does not support connect to broker over TLS._
+Install SIMQTT for devices with firmware 10.x.x or later.  Install SIMQTT_Legacy for devices with firmware less  than 10.x.x. _Note that SIMQTT Legacy only supports MQTT connection over TCP and not TLS._
 
 ### MQTT Broker
 Should be pretty stright forward.
