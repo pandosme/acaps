@@ -1,11 +1,13 @@
 # Parking Spaces
-Monitor parking space transitions (free or occupied) using either vehicle detection or ALPV (Axis License Plate Verifier).  A special version of [ALPV](https://files.aintegration.team/acap/AXIS%20License%20Plate%20Verifier/armv7hf) needs to be installed on the device if you plan to detect license plates.
+Monitor parking space transitions (free or occupied) using either vehicle detection or ALPV (Axis License Plate Verifier).  A special version of [ALPV](https://www.axis.com/sv-se/products/axis-license-plate-verifier) needs to be installed on the device if you plan to detect license plates.
 
-### Events
+### Integration
+The ACAP produces following two events
 1. parking/occupancy:  When a transition between free/occupied occurs
 2. parking/vehicles: The total number of vehicles occupying parking spaces
 
-Use [SIMQTT](https://github.com/pandosme/acaps/tree/master/simqtt) to get event over MQTT.
+To get messages over MQTT it is recommeded to install [SIMQTT](https://github.com/pandosme/acaps/tree/master/simqtt).
+As these event are published on the ONVIF event stream it can also be integrated with a VMS.
 
 ## Spaces
 Add parking space and use mouse to select the area.  Spaces will turn green (free), red (occupied) or yellow (no transition detected).
