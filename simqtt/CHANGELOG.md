@@ -1,5 +1,7 @@
-## 1.2.0
+## 1.2.1
+- LWT property "serial" changed to "device" to match announcement message
 
+## 1.2.0
 - Breaking Changes: Payload property "serial" changed to "device"
 - New UI Look & Feel
 - Added support for Supervised ports, PIR and casing tampering detection
