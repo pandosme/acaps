@@ -1,3 +1,6 @@
+## 1.2.2
+- Fixed a logic flaw for tampering/port (supervised digital input port)
+
 ## 1.2.1
 - LWT property "serial" changed to "device" to match announcement message
 
