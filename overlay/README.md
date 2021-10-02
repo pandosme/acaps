@@ -6,7 +6,7 @@ Easily add a dynamic text overlay in video that can easily updated using HTTP (G
 
 Define the text overlay to your liking.  You can use the "Test text" to set a string while configuring.
 * Placement
-* Size
+* Size (width & height)
 * Background color
 * Text color
 * Transperancy
