@@ -11,6 +11,8 @@ Define the text overlay to your liking.  You can use the "Test text" to set a st
 * Text color
 * Transperancy
 
+Clear time will automatically clear the text after X amount of time.
+
 ## HTTP
 
 You can copy the HTTP url bly clicking "Get HTTP link" and paste that into your HTTP client.
