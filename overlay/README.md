@@ -4,7 +4,7 @@ Easily add a dynamic text overlay in video that can easily updated using HTTP (G
 
 ![overlay](https://files.juhlin.me/image/KTEOFBZUHZ)
 
-## [Download](https://files.juhlin.me/acap/overlay)
+### [Download](https://files.juhlin.me/acap/overlay)
 *Note that Overlay is only supported for cameras based on ARTPEC-7 platform*
 
 ## Configuration
