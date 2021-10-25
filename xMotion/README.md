@@ -1,5 +1,5 @@
 # xMotion
-A camera MQTT client that publish motion-based analytics data that can be used for a number of different use cases.  Motion detection is a common use case but xMotion is mainly targeting path/flows monitoring, automation, counting and forensic search.  Systems can select different types of payloads depending on use case.
+A camera MQTT client ACAP that publish motion-based analytics data that can be used for a number of different use cases.  Motion detection is a common use case but xMotion is mainly targeting path/flows monitoring, automation, counting and forensic search.  Systems can select different types of payloads depending on use case.  xMotion van run on both cameras and radar.
 
 ![overlay](https://files.juhlin.me/image/YWFQGVMLNS)
 
