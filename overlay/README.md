@@ -1,6 +1,6 @@
 # OVERLAY
 
-Easily add a dynamic text overlay in video that can easily updated using HTTP (GET) or by MQTT message.
+Easily add a dynamic text overlay in video that can easily updated using HTTP (GET) or by MQTT message.  The standard camera overlay will not be affected.
 
 ![overlay](https://files.juhlin.me/image/KTEOFBZUHZ)
 
