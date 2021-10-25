@@ -107,7 +107,7 @@ Objects (x,y,w,h) is optimized for tracker/path and xy is the center of gravity 
   y = y - h
 ```
 ## Filter
-To optimize the system performance, it may be necessary to filter detections.  This reduces both payload and processing required by the consumer.
+To optimize the system performance, it may be necessary to filter detections.  This reduces both payload and processing required by the consumer.  It is the objects x and y that is checked to area of intrest.  The bounding box, width and height has no impact.  See Coordinate system.
 
 ### Set detection area
 Use the mouse to mark the area where objects will be detected.  Path and tracker will continue tracking objects outside this area.
