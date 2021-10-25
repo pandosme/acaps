@@ -91,7 +91,7 @@ Path are based on trackers and published when an object left the scene (or track
 - device: \[String] The serial number of the device
 - id: \[Number] Unique tracker id
 - timestamp: \[Number] Birth time in EPOCH (UNIX)
-- death: \[Number] Birth time in EPOCH (UNIX)
+- death: \[Number] Death time in EPOCH (UNIX)
 - distance: \[Number] The distance covered in % of view.  May be more that 100% if objects move back/forth
 - age: \[Number] In seconds (death-birth)
 - path: \[Array] Object path in 5% increments (see coordinate system)
