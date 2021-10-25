@@ -2,6 +2,14 @@
 
 An MQTT Client for Axis devices that simplifies monitoring events over MQTT. All common events are automatically published. Users may add additional properties in payload such as name, location and various time formats.
 
+
+![config](https://files.juhlin.me/image/UYJMBDEHGD)
+
+# [Download (ZIP)](https://files.juhlin.me/acap/simqtt)
+Unzip the file and install the eap-file on the camera.
+
+*Install SIMQTT for cameras with firmware 10.0 and later. Install SIMQTT_Legacy for camera below 10.0*
+
 ## Installation
 
 Install SIMQTT for devices with firmware 10.x.x or later.  Install SIMQTT_Legacy for devices with firmware less  than 10.x.x. _Note that SIMQTT Legacy only supports MQTT connection over TCP and not TLS._
