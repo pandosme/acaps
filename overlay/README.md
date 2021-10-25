@@ -5,6 +5,8 @@ Easily add a dynamic text overlay in video that can easily updated using HTTP (G
 ![overlay](https://files.juhlin.me/image/KTEOFBZUHZ)
 
 # [Download (ZIP)](https://files.juhlin.me/acap/overlay)
+Unzip the file and install the eap-file on the camera.
+
 *Note that Overlay is only supported for cameras based on ARTPEC-7 platform*
 
 ## Configuration
@@ -26,3 +28,5 @@ You can copy the HTTP url bly clicking "Get HTTP link" and paste that into your 
 ![config](https://files.juhlin.me/image/WRJPTQLKNQ)
 
 Connect to the broker.  Once connected you will see (or change) the topic the MQTT clients can publish a text string to.  By default the subscription includes the device serial number.  Change the topic to a generic topic if you have many cameras that should have the same text overlay.
+
+
