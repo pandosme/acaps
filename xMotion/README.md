@@ -8,6 +8,10 @@ A camera MQTT client that publish motion-based analytics data that can be used f
 ## Messages view
 This page is designed for validation and not as a user client.  The video played is medium size resolution with 5 fps playback.  In order to get detections, trackers and paths to be displayed, the MQTT broker must support connectiion using WebSocket.  Green dots shows where objects are born and red where they died.
 
+At the bottom users can add a name (typicall system id of camera) and group (system grouping) that will be added to every payload.  To suppress short sporadic detections it is possible to set minimum distance an object needs to pass.
+
+For paths it is possible to get an image capture when the object passed the minimum limit.  Images are typically used for validation and forensic search.  Note that payloads will be big.
+
 ## Detection
 Detection messages are bounding boxes of detected objects.  Bounding boxes is great for real-time visualization but generates a lot of data and hard to consume and process for other use cases.  The same data is part of ONVIF Profile M (XML data over RTP) and targets ONVIF clients.  xMotion targets IT integration and provides the same data in a consumer-friendly structure, standard coordinate system with the ability to filter on area-of-interest, limiting the strain for consuming services.
 
