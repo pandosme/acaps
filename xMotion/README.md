@@ -4,6 +4,9 @@ A camera MQTT client ACAP that publish motion-based analytics data that can be u
 ![overlay](https://files.juhlin.me/image/YWFQGVMLNS)
 
 # [Download (ZIP)](https://files.juhlin.me/acap/xmotion)
+*Supported platforms: MIPS, ARMv7hf, AARCH64*
+
+Unzip files and install the eap-file corresponding to your device
 
 ## Messages view
 This page is designed for validation and not as a user client.  The video played is medium size resolution with 5 fps playback.  In order to get detections, trackers and paths to be displayed, the MQTT broker must support connectiion using WebSocket.  Green dots shows where objects are born and red where they died.
