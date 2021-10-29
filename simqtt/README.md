@@ -22,4 +22,4 @@ Name and Location will be included in every payload as "name" and "location" if 
 Select format for property "timestamp".  Either EPOCH (milli seconds since Jan 1 1970) is ISO (YYYY-MM-DDTHH:MM:SS+Zone-offset)
 
 ## Messages (Topics & Payload)
-[List of topics and payload}(https://github.com/pandosme/acaps/blob/master/simqtt/topics.md)
+[List of topics and payload](https://github.com/pandosme/acaps/blob/master/simqtt/topics.md)
