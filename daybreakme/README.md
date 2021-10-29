@@ -5,6 +5,7 @@ ACAP for Axis Cameras that generates  events on dawn, sunrise, sun noon, sunset,
 
 # [Download (ZIP)](https://files.juhlin.me/acap/daybreakme)
 *Supported platforms: MIPS, ARMv7hf, AARCH64*
+
 Unzip files and install the eap-file corresponding to your device
 
 # Settings
