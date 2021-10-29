@@ -3,11 +3,8 @@ ACAP for Axis Cameras that generates  events on dawn, sunrise, sun noon, sunset,
 
 ![home](pictures/home.png)
 
-## Download
-- [MIPS](https://github.com/pandosme/acaps/raw/master/daybreakme/files/Daybreak_Me_2_4_0_mipsisa32r2el.eap)
-- [ARMv7hf](https://github.com/pandosme/acaps/raw/master/daybreakme/files/Daybreak_Me_2_4_0_armv7hf.eap)
-- [AARCH64](https://github.com/pandosme/acaps/raw/master/daybreakme/files/Daybreak_Me_2_4_0_aarch64.eap)
-
+# [Download (ZIP)](https://files.juhlin.me/acap/daybreakme)
+*Supported platforms: MIPS, ARMv7hf, AARCH64*
 
 # Settings
 
