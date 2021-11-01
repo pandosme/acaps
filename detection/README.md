@@ -1,38 +1,28 @@
 # Detection
-An MQTT client that publish object detections for cameras that have support for object classification.
+An MQTT client that publish object detections (classifications) for cameras that supports for object classification.
 
-## Settings
-At the top you will find the MQTT topic that messages are published on
+## Messages View
+Messages is primarily for validating behaviour.  The page needs to connect to the MQTT broker over WebSocket to display visualization of detections.
+![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-messages.jpeg)
 
-### Set detection area
-Use mouse to mark the area of interest
+### Settings
+* MQTT topic:  The topic that message will be published on.  You can copy/paste this into your MQTT client
+* Name:  If you have many cameras you can set a name that will be included in the payload
+* Group:  If you have cameras on multiple locations you can add a group name that will be included in the payload
+* Overlapping:  The analytics may multiple detections that overlap.  Select if you want them or not
+* Throttling:  Controls often messages will be publioshed.  For slow changing scenes you reduce the strain on the system.  Setting to 1 message every 10 second will include all detections under that time.
 
-### Set minimum size
-Suppress small/sporadic unwanted detections
-
-### Throttling
-For slow moving scenes, spare your MQTT broker with unnecessary messages
-
-### Classification
-Filter on specific object type
-
-### Confidence
-Set higher value do suppress unwanted detections
-
-### Overlapping
-Suppress when video analytic provides two or more overlapping detections 
-
-### Detection validation (MQTT Client)
-If your MQTT broker supports WebSocket you can view/monitor the detection in the image view.
+## Filter
+In order to reduce the strain for a system it is a good practice to remove as much unnessessery data.
+![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-filter.jpeg)
+* Set detection area:  Use the mouse and define the area of intrest.  It is the center of the object that needs to be inside the area.
+* Minimum size:  Use mouse to set minimum widyj and height.  Use with caution.
+* Maximum size:  Some false detections may be very big.  Use this filter to remove them.
+* Set ignore area:  If there are areas withing the area-of-intrest that genenerates disturbance detections.
+* Classification types:  Select the classifications you want (or do not want).  It is possible to chage the name that will be published in the payload.
 
 ## MQTT
-
-### MQTT Broker
 Should be pretty straight forward.
-
-Pre-topic can be used for
-1. Use a topic that your MQTT account is authorized to use
-2. Add device ID if you have MQTT clients that needs to subscribe to a specific device and cannot parse the payload (e.g. detection/ACCC8EXXXXXX)
-
-### Additional payload properties
-Name and Location will be included in every payload as "name" and "location" if they contain any user defined text string. Select format for property "timestamp". Either EPOCH (milliseconds since Jan 1 1970) is ISO (YYYY-MM-DDTHH:MM:SS+ZONE)
+![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-mqtt.jpeg)
+* TLS: Select if you connect over TLS (typically on port 8883).  Select "Trust certificate" if the broker is using a self-signed certificate.
+* Set client certificate:  For MQTT broker that requires a client TLS certificate for authentication
