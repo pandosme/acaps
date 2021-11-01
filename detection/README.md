@@ -9,7 +9,6 @@ Messages is primarily for validating behavior.  The page needs to connect to the
 
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-messages.jpeg)
 
-### Settings
 * MQTT topic:  The topic that message will be published on.  You can copy/paste this into your MQTT client
 * Name:  If you have many cameras, you can set a name that will be included in the payload
 * Group:  If you have cameras on multiple locations, you can add a group name that will be included in the payload
