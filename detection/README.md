@@ -29,6 +29,8 @@ To reduce the strain for a system it is a good practice to remove as much unnece
 
 ## MQTT
 Should be pretty straight forward.
+
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-mqtt.JPG)
+
 * TLS: Select if you connect over TLS (typically on port 8883).  Select "Trust certificate" if the broker is using a self-signed certificate.
 * Set client certificate:  For MQTT broker that requires a client TLS certificate for authentication
