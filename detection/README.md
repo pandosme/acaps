@@ -2,24 +2,24 @@
 An MQTT client that publish object detections (classifications) for cameras that supports for object classification.
 
 ## Messages View
-Messages is primarily for validating behaviour.  The page needs to connect to the MQTT broker over WebSocket to display visualization of detections.
+Messages is primarily for validating behavior.  The page needs to connect to the MQTT broker over WebSocket to display visualization of detections.
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-messages.jpeg)
 
 ### Settings
 * MQTT topic:  The topic that message will be published on.  You can copy/paste this into your MQTT client
-* Name:  If you have many cameras you can set a name that will be included in the payload
-* Group:  If you have cameras on multiple locations you can add a group name that will be included in the payload
+* Name:  If you have many cameras, you can set a name that will be included in the payload
+* Group:  If you have cameras on multiple locations, you can add a group name that will be included in the payload
 * Overlapping:  The analytics may multiple detections that overlap.  Select if you want them or not
-* Throttling:  Controls often messages will be publioshed.  For slow changing scenes you reduce the strain on the system.  Setting to 1 message every 10 second will include all detections under that time.
+* Throttling:  Controls often messages will be published.  For slow changing scenes you reduce the strain on the system.  Setting to 1 message every 10 second will include all detections under that time.
 
 ## Filter
-In order to reduce the strain for a system it is a good practice to remove as much unnessessery data.
+To reduce the strain for a system it is a good practice to remove as much unnecessary data.
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-filter.jpeg)
-* Set detection area:  Use the mouse and define the area of intrest.  It is the center of the object that needs to be inside the area.
-* Minimum size:  Use mouse to set minimum widyj and height.  Use with caution.
+* Set detection area:  Use the mouse and define the area of interest.  It is the center of the object that needs to be inside the area.
+* Minimum size:  Use mouse to set minimum width and height.  Use with caution.
 * Maximum size:  Some false detections may be very big.  Use this filter to remove them.
-* Set ignore area:  If there are areas withing the area-of-intrest that genenerates disturbance detections.
-* Classification types:  Select the classifications you want (or do not want).  It is possible to chage the name that will be published in the payload.
+* Set ignore area:  If there are areas withing the area-of-interest that generates disturbance detections.
+* Classification types:  Select the classifications you want (or do not want).  It is possible to change the name that will be published in the payload.
 
 ## MQTT
 Should be pretty straight forward.
