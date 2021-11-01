@@ -6,6 +6,7 @@ An MQTT client that publish object detections (classifications) for cameras that
 
 ## Messages View
 Messages is primarily for validating behavior.  The page needs to connect to the MQTT broker over WebSocket to display visualization of detections.
+
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-messages.jpeg)
 
 ### Settings
@@ -17,7 +18,9 @@ Messages is primarily for validating behavior.  The page needs to connect to the
 
 ## Filter
 To reduce the strain for a system it is a good practice to remove as much unnecessary data.
+
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-filter.jpeg)
+
 * Set detection area:  Use the mouse and define the area of interest.  It is the center of the object that needs to be inside the area.
 * Minimum size:  Use mouse to set minimum width and height.  Use with caution.
 * Maximum size:  Some false detections may be very big.  Use this filter to remove them.
