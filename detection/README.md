@@ -1,6 +1,9 @@
 # Detection
 An MQTT client that publish object detections (classifications) for cameras that supports for object classification.
 
+### [Download (ZIP)](https://files.juhlin.me/acap/detection)
+*Supported platforms: ARMv7hf*
+
 ## Messages View
 Messages is primarily for validating behavior.  The page needs to connect to the MQTT broker over WebSocket to display visualization of detections.
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-messages.jpeg)
