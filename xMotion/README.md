@@ -26,17 +26,16 @@ Messages are published up to 5/s and include all the detected objects in that fr
   "device":"ACCC8EXXXXXX",
   "timestamp":1634757165727,
   "detections":[
-    {"id":14,"x":436,"y":779,"w":319,"h":296},
-    {"id":18,"x":624,"y":344,"w":25,"h":118},
-    {"id":13,"x":545,"y":456,"w":102,"h":230},
-    {"id":12,"x":688,"y":285,"w":29,"h":72},
-    {"id":11,"x":416,"y":358,"w":95,"h":138}
+    {"id":7901,"x":536,"y":270,"w":147,"h":158,"cx":609,"cy":428}
   ]
 }
 ```
 - device: \[String] The serial number of the device
 - timestamp: \[Number] EPOCH (UNIX) time since January 1 1970 in milli-second resolution
 - detections: \[Array] Detected objects (see coordinate system).  If the array is empty, all detection ID are lost.  An empty array will only be published when no objects are detected (all previous object id are lost/dead).
+- id: \[Number] Unique tracker id
+- x,y,w,h: \[Number] See coordinate system
+- cx,cy: \[Number] Center-of-gravity.  Can be bottom-center, middle-center or top-left depending on settings
 
 ## Tracker
 Trackers are based on the detections but only published when objects has moved 5% from the past publish. The bandwidth compared to detections is substantial lower and trackers are much easier for services to build use cases around.  Trackers are perfect for real-time processing services such as triggering events, recording controller or system automation.
@@ -48,21 +47,24 @@ Trackers includes object id, x, y, width, height, delta x/y movement, distance a
 {
   "device":"ACCC8EXXXXXX",
   "timestamp":1634756482392,
-  "id":6534,
-  "x":943,
-  "y":246,
-  "w":47,
-  "h":39,
-  "distance":117.8,
-  "age":9.8,
-  "dx":913,
-  "dy":-710,
-  "dead":true
+  "id":7966,
+  "cx":975,
+  "cy":645,
+  "x":953,
+  "y":557,
+  "w":45,
+  "h":88,
+  "distance":54.1,
+  "age":1,
+  "dx":446,
+  "dy":276,
+  "dead":false
 }
 ```
 - device: \[String] The serial number of the device
 - timestamp: \[Number] EPOCH (UNIX) time since January 1 1970 in milli scond resolution
 - id: \[Number] Unique tracker id
+- cx,cy: \[Number] Center-of-gravity.  Can be bottom-center, middle-center or top-left depending on settings
 - x,y,w,h: \[Number] See coordinate system
 - distance: \[Number] The distance in % of view.  May be more than 100% if objects moves back/forth in scene
 - age: \[Number] Age in seconds since birth
@@ -82,7 +84,7 @@ Path are based on trackers and published when an object left the scene (or track
   "death":1635028203972,
   "distance":27.8,
   "age":4.8,
-  "path":[{"x":156,"y":219,"w":44,"h":85},...],
+  "path":[{"cx":200,"cy":304,"x":156,"y":219,"w":44,"h":85},...],
   "image":{
     "device":"ACCC8EXXXXXX",
     "id":423,
@@ -104,13 +106,8 @@ Path are based on trackers and published when an object left the scene (or track
 ## Coordinate system
 xMotion use a relative coordinate system from [0,0] to [1000,1000].  Origin is in the top left corner.
 
-Objects (x,y,w,h) is optimized for tracker/path and xy is the center of gravity (where the feet of a person touches the ground).  When visualizing an object bounding box as a rectangle, the x and y needs to be transformed.
-```
-  x = x - w/2
-  y = y - h
-```
 ## Filter
-To optimize the system performance, it may be necessary to filter detections.  This reduces both payload and processing required by the consumer.  It is the objects x and y that is checked to area of intrest.  The bounding box, width and height has no impact.  See Coordinate system.
+To optimize the system performance, it may be necessary to filter detections.  This reduces both payload and processing required by the consumer.  It is the objects cx and cy that is checked to area of intrest. Note that cx,cy may be represented as bottom-center, middle-center or top-left depending of the object depending on settings. Default is bottom-center (feet) of an object.
 
 ### Set detection area
 Use the mouse to mark the area where objects will be detected.  Path and tracker will continue tracking objects outside this area.
