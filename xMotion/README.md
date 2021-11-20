@@ -37,6 +37,23 @@ Messages are published up to 5/s and include all the detected objects in that fr
 - x,y,w,h: \[Number] See coordinate system
 - cx,cy: \[Number] Center-of-gravity.  Can be bottom-center, middle-center or top-left depending on settings
 
+When running on a Radar device an additional "radar" property will be added
+```
+radar: {
+  "speed":13.1,
+  "direction":313,
+  "distance":36,
+  "angle":-26.1,
+  "type":4
+ }
+```
+- speed: Object speed in meter/second
+- direction:  Object direction angle in degrees -180 to 180 where 0 is direction towards the radar
+- distance:  Distance in meter between object and radar
+- angle: The location angle of the object related to the radar direction (-180 to 180)
+- type:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.
+
+
 ## Tracker
 Trackers are based on the detections but only published when objects has moved 5% from the past publish. The bandwidth compared to detections is substantial lower and trackers are much easier for services to build use cases around.  Trackers are perfect for real-time processing services such as triggering events, recording controller or system automation.
 
@@ -71,6 +88,24 @@ Trackers includes object id, x, y, width, height, delta x/y movement, distance a
 - dx: \[Number] Delta X movement from birth (See coordinate system). A positive = moving right and negative = moving left.
 - dy: \[Number] Delta Y movement from birth (See coordinate system). A positive = moving down and negative = moving up.
 - dead: \[Bool] False means the object is being tracked.  True means the object is lost and the ID will not be published any more.
+
+When running on a Radar device an additional "radar" property will be added
+```
+radar: {
+  "speed": 10.3,
+  "direction":313,
+  "distance":36,
+  "angle":-26.1,
+  "type":4,
+  "topSpeed":13.1
+ }
+```
+- speed: Object speed in meter/second
+- direction:  Object direction angle in degrees -180 to 180 where 0 is direction towards the radar
+- distance:  Distance in meter between object and radar
+- angle: The location angle of the object related to the radar direction (-180 to 180)
+- type:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.
+- topSpeed: The object max speed (meter/second) during tracking
 
 ## Path
 Path are based on trackers and published when an object left the scene (or tracker id is lost).  The bandwidth utilization compared to detection and trackers is very limited.  Paths are perfect for post-processing system and is typically stored in a database that can be queried for counting, flow analysis and forensic search.  A small/medium size image capture can be included if the use case requires image visualization/validation.
