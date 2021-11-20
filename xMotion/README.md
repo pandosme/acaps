@@ -39,7 +39,7 @@ Messages are published up to 5/s and include all the detected objects in that fr
 
 When running on a Radar device an additional "radar" property will be added
 ```
-radar: {
+"radar": {
   "speed":13.1,
   "direction":313,
   "distance":36,
@@ -91,7 +91,7 @@ Trackers includes object id, x, y, width, height, delta x/y movement, distance a
 
 When running on a Radar device an additional "radar" property will be added
 ```
-radar: {
+"radar": {
   "speed": 10.3,
   "direction":313,
   "distance":36,
