@@ -5,7 +5,7 @@ An MQTT client that publish object detections (classifications) for cameras that
 *Supported platforms: ARMv7hf*
 
 ## Messages View
-Messages is primarily for validating behavior.  The page needs to connect to the MQTT broker over WebSocket to display visualization of detections.
+The message view is primarily for installation and trouble-shooting.  In order to visualize detections, the MQTT broker must support WebSocket connections, typically port 1884.
 
 ![messages](https://github.com/pandosme/acaps/raw/master/detection/images/detection-messages.jpeg)
 
