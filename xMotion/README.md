@@ -3,8 +3,11 @@ A camera MQTT client ACAP that publish motion-based analytics data that can be u
 
 ![overlay](https://files.juhlin.me/image/YWFQGVMLNS)
 
-# [Download (ZIP)](https://files.juhlin.me/acap/xmotion)
-*Supported platforms: MIPS, ARMv7hf, AARCH64*
+## [Download xMotion 1](https://files.juhlin.me/acap/xmotion)
+Use xMotion 1 for cameras and radar products that does not required object classification
+
+## [Download xMotion 2](https://files.juhlin.me/acap/xmotion2)
+xMotion 2 will include object classification (depending on camera).  Radar products not supported. 
 
 Unzip files and install the eap-file corresponding to your device
 
@@ -21,6 +24,7 @@ Detection messages are bounding boxes of detected objects.  Bounding boxes is gr
 Messages are published up to 5/s and include all the detected objects in that frame.
 
 ### xmotion/detection/DEVICE
+*xMotion2:  Classification is not included in detection payload*
 ```
 {
   "device":"ACCC8EXXXXXX",
