@@ -10,6 +10,7 @@ Use xMotion 1 for cameras and radar products that does not required object class
 xMotion 2 will include object classification (depending on camera).  Radar products not supported. 
 
 Unzip files and install the eap-file corresponding to your device
+
 *It is recommeded to use device firmware 10.8.x or later for better perfomance*
 
 ## Messages view
