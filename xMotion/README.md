@@ -10,6 +10,7 @@ Use xMotion 1 for cameras and radar products that does not required object class
 xMotion 2 will include object classification (depending on camera).  Radar products not supported. 
 
 Unzip files and install the eap-file corresponding to your device
+*It is recommeded to use device firmware 10.8.x or later for better perfomance*
 
 ## Messages view
 This page is designed for validation and not as a user client.  The video played is medium size resolution with 5 fps playback.  In order to get detections, trackers and paths to be displayed, the MQTT broker must support connectiion using WebSocket.  Green dots shows where objects are born and red where they died.
@@ -79,6 +80,7 @@ Trackers includes object id, x, y, width, height, delta x/y movement, distance a
   "age":1,
   "dx":446,
   "dy":276,
+  "class": "Car",
   "dead":false
 }
 ```
@@ -91,6 +93,7 @@ Trackers includes object id, x, y, width, height, delta x/y movement, distance a
 - age: \[Number] Age in seconds since birth
 - dx: \[Number] Delta X movement from birth (See coordinate system). A positive = moving right and negative = moving left.
 - dy: \[Number] Delta Y movement from birth (See coordinate system). A positive = moving down and negative = moving up.
+- class: \[String] xMotion2 provides classification of Person, Car, Truck, Bus, Vehicle, Bike, Motorcycle (depending on camera model)
 - dead: \[Bool] False means the object is being tracked.  True means the object is lost and the ID will not be published any more.
 
 When running on a Radar device an additional "radar" property will be added
@@ -123,6 +126,7 @@ Path are based on trackers and published when an object left the scene (or track
   "death":1635028203972,
   "distance":27.8,
   "age":4.8,
+  "class": "Bus",  
   "path":[{"cx":200,"cy":304,"x":156,"y":219,"w":44,"h":85},...],
   "image":{
     "device":"ACCC8EXXXXXX",
@@ -137,6 +141,7 @@ Path are based on trackers and published when an object left the scene (or track
 - timestamp: \[Number] Birth time in EPOCH (UNIX)
 - death: \[Number] Death time in EPOCH (UNIX)
 - distance: \[Number] The distance covered in % of view.  May be more that 100% if objects move back/forth
+- class: \[String] xMotion2 provides classification of Person, Car, Truck, Bus, Vehicle, Bike, Motorcycle (depending on camera model)
 - age: \[Number] In seconds (death-birth)
 - path: \[Array] Object path in 5% increments (see coordinate system)
 - image: \[Null or Object] Depends on configuration.  JPEG are Base64 encoded 
