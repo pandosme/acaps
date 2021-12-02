@@ -3,7 +3,7 @@ A camera MQTT client ACAP that publish motion-based analytics data that can be u
 
 ![overlay](https://files.juhlin.me/image/YWFQGVMLNS)
 
-## [Download xMotion 1](https://files.juhlin.me/acap/xmotion)
+## [Download xMotion 1](https://files.juhlin.me/acap/xmotion1)
 Use xMotion 1 for cameras and radar products that does not required object classification
 
 ## [Download xMotion 2](https://files.juhlin.me/acap/xmotion2)
