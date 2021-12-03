@@ -2,10 +2,12 @@
 Monitor parking space transitions (free or occupied)
 
 ### [Download Parking Space](https://files.juhlin.me/acap/Parking)
-*Only supported for cameras based on ARMv7hf*
+*Only supported for cameras based on ARMv7hf.*
 
 ### Installation
 Mount camera to view up to 8 parking spaces.  Angles may require adjustments to increase reliability.
+
+* It is recommeded to use cameras with firmware 10.8.x or later *
 
 ### Integration
 The ACAP produces following two events
@@ -23,7 +25,7 @@ Add parking space and use mouse to select the area.  Spaces will turn green (fre
 ### Settings
 Select detection type (Vehicle or ALPV).  Set as long transition period as possible in order to reduce unwanted transitions due to faulty detections or scene disturbance such as objects blocking the vehicle for short periods.
 
-*Note: a special version of [ALPV](https://www.axis.com/sv-se/products/axis-license-plate-verifier) needs to be installed on the device if you plan to detect license plates.*
+*Note: *
 
 ### Set detection area
 Only needed for Vehicle detection to reduce possible false detections in areas that you are not interested in.
@@ -32,5 +34,5 @@ Only needed for Vehicle detection to reduce possible false detections in areas t
 Only needed for Vehicle detection to reduce possible false detections when experiencing false detection due to short/small disturbances.
 
 ## Limitations
-* The result is only as good as the analytics data produced by the device or ALPV
-* DLPU cameras with firmware > 10.5 are not supported
+* A special version of [ALPV](https://www.axis.com/sv-se/products/axis-license-plate-verifier) needs to be installed on the device if you plan to detect occupancy by license plates.
+
