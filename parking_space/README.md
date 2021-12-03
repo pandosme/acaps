@@ -2,7 +2,7 @@
 Monitor parking space transitions (free or occupied)
 
 ### [Download Parking Space](https://files.juhlin.me/acap/Parking)
-*Only supported for cameras based on ARTPEC-7*
+*Only supported for cameras based on ARMv7hf*
 
 ### Integration
 The ACAP produces following two events
