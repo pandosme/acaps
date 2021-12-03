@@ -1,7 +1,7 @@
 # Parking Spaces
 Monitor parking space transitions (free or occupied)
 
-## [Download Parking Space](https://files.juhlin.me/acap/Parking)
+### [Download Parking Space](https://files.juhlin.me/acap/Parking)
 *Only supported for cameras based on ARTPEC-7*
 
 ### Integration
