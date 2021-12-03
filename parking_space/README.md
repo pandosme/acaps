@@ -1,5 +1,8 @@
 # Parking Spaces
-Monitor parking space transitions (free or occupied) using either vehicle detection or ALPV (Axis License Plate Verifier).  A special version of [ALPV](https://www.axis.com/sv-se/products/axis-license-plate-verifier) needs to be installed on the device if you plan to detect license plates.
+Monitor parking space transitions (free or occupied)
+
+## [Download Parking Space](https://files.juhlin.me/acap/Parking)
+* Only supported for cameras based on ARTPEC-7*
 
 ### Integration
 The ACAP produces following two events
@@ -16,6 +19,8 @@ Add parking space and use mouse to select the area.  Spaces will turn green (fre
 
 ### Settings
 Select detection type (Vehicle or ALPV).  Set as long transition period as possible in order to reduce unwanted transitions due to faulty detections or scene disturbance such as objects blocking the vehicle for short periods.
+
+*Note: a special version of [ALPV](https://www.axis.com/sv-se/products/axis-license-plate-verifier) needs to be installed on the device if you plan to detect license plates.*
 
 ### Set detection area
 Only needed for Vehicle detection to reduce possible false detections in areas that you are not interested in.
