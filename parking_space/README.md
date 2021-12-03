@@ -4,6 +4,9 @@ Monitor parking space transitions (free or occupied)
 ### [Download Parking Space](https://files.juhlin.me/acap/Parking)
 *Only supported for cameras based on ARMv7hf*
 
+### Installation
+Mount camera to view up to 8 parking spaces.  Angles may require adjustments to increase reliability.
+
 ### Integration
 The ACAP produces following two events
 1. parking/occupancy:  When a transition between free/occupied occurs
