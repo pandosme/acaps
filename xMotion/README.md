@@ -3,15 +3,15 @@ A camera MQTT client ACAP that publish motion-based analytics data that can be u
 
 ![overlay](https://files.juhlin.me/image/YWFQGVMLNS)
 
-## [Download xMotion 1](https://files.juhlin.me/acap/xmotion1)
-Use xMotion 1 for cameras and radar products that does not required object classification
+# [Download (ZIP)](https://files.juhlin.me/acap/xmotion)
 
-## [Download xMotion 2](https://files.juhlin.me/acap/xmotion2)
-xMotion 2 will include object classification (depending on camera).  Radar products not supported. 
+Use version 1.x for cameras and radar products that does not support (or require) object classification
+
+Use version 2.x for use-cases that require object classification (depending on camera support). Not supported in Radar products.
 
 Unzip files and install the eap-file corresponding to your device
 
-*It is recommeded to use device firmware 10.8.x or later for better perfomance*
+It is recommeded to use device firmware 10.8.x or later for better perfomance
 
 ## Messages view
 This page is designed for validation and not as a user client.  The video played is medium size resolution with 5 fps playback.  In order to get detections, trackers and paths to be displayed, the MQTT broker must support connectiion using WebSocket.  Green dots shows where objects are born and red where they died.
@@ -26,39 +26,22 @@ Detection messages are bounding boxes of detected objects.  Bounding boxes is gr
 Messages are published up to 5/s and include all the detected objects in that frame.
 
 ### xmotion/detection/DEVICE
-*xMotion2:  Classification is not included in detection payload*
 ```
 {
   "device":"ACCC8EXXXXXX",
   "timestamp":1634757165727,
   "detections":[
-    {"id":7901,"x":536,"y":270,"w":147,"h":158,"cx":609,"cy":428}
+    {"id":14,"x":436,"y":779,"w":319,"h":296},
+    {"id":18,"x":624,"y":344,"w":25,"h":118},
+    {"id":13,"x":545,"y":456,"w":102,"h":230},
+    {"id":12,"x":688,"y":285,"w":29,"h":72},
+    {"id":11,"x":416,"y":358,"w":95,"h":138}
   ]
 }
 ```
 - device: \[String] The serial number of the device
 - timestamp: \[Number] EPOCH (UNIX) time since January 1 1970 in milli-second resolution
 - detections: \[Array] Detected objects (see coordinate system).  If the array is empty, all detection ID are lost.  An empty array will only be published when no objects are detected (all previous object id are lost/dead).
-- id: \[Number] Unique tracker id
-- x,y,w,h: \[Number] See coordinate system
-- cx,cy: \[Number] Center-of-gravity.  Can be bottom-center, middle-center or top-left depending on settings
-
-When running on a Radar device an additional "radar" property will be added
-```
-"radar": {
-  "speed":13.1,
-  "direction":313,
-  "distance":36,
-  "angle":-26.1,
-  "type":4
- }
-```
-- speed: Object speed in meter/second
-- direction:  Object direction angle in degrees -180 to 180 where 0 is direction towards the radar
-- distance:  Distance in meter between object and radar
-- angle: The location angle of the object related to the radar direction (-180 to 180)
-- type:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.
-
 
 ## Tracker
 Trackers are based on the detections but only published when objects has moved 5% from the past publish. The bandwidth compared to detections is substantial lower and trackers are much easier for services to build use cases around.  Trackers are perfect for real-time processing services such as triggering events, recording controller or system automation.
@@ -70,50 +53,27 @@ Trackers includes object id, x, y, width, height, delta x/y movement, distance a
 {
   "device":"ACCC8EXXXXXX",
   "timestamp":1634756482392,
-  "id":7966,
-  "cx":975,
-  "cy":645,
-  "x":953,
-  "y":557,
-  "w":45,
-  "h":88,
-  "distance":54.1,
-  "age":1,
-  "dx":446,
-  "dy":276,
-  "class": "Car",
-  "dead":false
+  "id":6534,
+  "x":943,
+  "y":246,
+  "w":47,
+  "h":39,
+  "distance":117.8,
+  "age":9.8,
+  "dx":913,
+  "dy":-710,
+  "dead":true
 }
 ```
 - device: \[String] The serial number of the device
 - timestamp: \[Number] EPOCH (UNIX) time since January 1 1970 in milli scond resolution
 - id: \[Number] Unique tracker id
-- cx,cy: \[Number] Center-of-gravity.  Can be bottom-center, middle-center or top-left depending on settings
 - x,y,w,h: \[Number] See coordinate system
 - distance: \[Number] The distance in % of view.  May be more than 100% if objects moves back/forth in scene
 - age: \[Number] Age in seconds since birth
 - dx: \[Number] Delta X movement from birth (See coordinate system). A positive = moving right and negative = moving left.
 - dy: \[Number] Delta Y movement from birth (See coordinate system). A positive = moving down and negative = moving up.
-- class: \[String] xMotion2 provides classification of Person, Car, Truck, Bus, Vehicle, Bike, Motorcycle (depending on camera model)
 - dead: \[Bool] False means the object is being tracked.  True means the object is lost and the ID will not be published any more.
-
-When running on a Radar device an additional "radar" property will be added
-```
-"radar": {
-  "speed": 10.3,
-  "direction":313,
-  "distance":36,
-  "angle":-26.1,
-  "type":4,
-  "topSpeed":13.1
- }
-```
-- speed: Object speed in meter/second
-- direction:  Object direction angle in degrees -180 to 180 where 0 is direction towards the radar
-- distance:  Distance in meter between object and radar
-- angle: The location angle of the object related to the radar direction (-180 to 180)
-- type:  Object classification. 2 = Undefined, 3 = Human, 4 = Vehicle.
-- topSpeed: The object max speed (meter/second) during tracking
 
 ## Path
 Path are based on trackers and published when an object left the scene (or tracker id is lost).  The bandwidth utilization compared to detection and trackers is very limited.  Paths are perfect for post-processing system and is typically stored in a database that can be queried for counting, flow analysis and forensic search.  A small/medium size image capture can be included if the use case requires image visualization/validation.
@@ -127,8 +87,7 @@ Path are based on trackers and published when an object left the scene (or track
   "death":1635028203972,
   "distance":27.8,
   "age":4.8,
-  "class": "Bus",  
-  "path":[{"cx":200,"cy":304,"x":156,"y":219,"w":44,"h":85},...],
+  "path":[{"x":156,"y":219,"w":44,"h":85},...],
   "image":{
     "device":"ACCC8EXXXXXX",
     "id":423,
@@ -142,7 +101,6 @@ Path are based on trackers and published when an object left the scene (or track
 - timestamp: \[Number] Birth time in EPOCH (UNIX)
 - death: \[Number] Death time in EPOCH (UNIX)
 - distance: \[Number] The distance covered in % of view.  May be more that 100% if objects move back/forth
-- class: \[String] xMotion2 provides classification of Person, Car, Truck, Bus, Vehicle, Bike, Motorcycle (depending on camera model)
 - age: \[Number] In seconds (death-birth)
 - path: \[Array] Object path in 5% increments (see coordinate system)
 - image: \[Null or Object] Depends on configuration.  JPEG are Base64 encoded 
@@ -151,8 +109,13 @@ Path are based on trackers and published when an object left the scene (or track
 ## Coordinate system
 xMotion use a relative coordinate system from [0,0] to [1000,1000].  Origin is in the top left corner.
 
+Objects (x,y,w,h) is optimized for tracker/path and xy is the center of gravity (where the feet of a person touches the ground).  When visualizing an object bounding box as a rectangle, the x and y needs to be transformed.
+```
+  x = x - w/2
+  y = y - h
+```
 ## Filter
-To optimize the system performance, it may be necessary to filter detections.  This reduces both payload and processing required by the consumer.  It is the objects cx and cy that is checked to area of intrest. Note that cx,cy may be represented as bottom-center, middle-center or top-left depending of the object depending on settings. Default is bottom-center (feet) of an object.
+To optimize the system performance, it may be necessary to filter detections.  This reduces both payload and processing required by the consumer.  It is the objects x and y that is checked to area of intrest.  The bounding box, width and height has no impact.  See Coordinate system.
 
 ### Set detection area
 Use the mouse to mark the area where objects will be detected.  Path and tracker will continue tracking objects outside this area.
@@ -162,4 +125,3 @@ Use minimum size to suppress small sporadic objects. Once tracking started, trac
 
 ### Set ignore area
 Use this are if there are parts of the detection area where they may be disturbances such as swaying flags/trees or light reflections.
-
