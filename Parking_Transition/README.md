@@ -39,6 +39,7 @@ An event is fired on every transition.  This can be used to trigger actions in t
 For easy integration to non video systems it is recommeded to use [SIMQTT](https://github.com/pandosme/acaps/tree/master/simqtt) to get data published as MQTT payload.
 
 **simqtt/acap/parking/Space1/true**
+
 The topic that SIMQTT will publish transition /true = occupied, /false = free.  The property "state" will also define occupied (true) or false (free)
 ```
 {
