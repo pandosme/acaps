@@ -11,7 +11,8 @@ An ACAP that generates an event when a parking space changes between free and oc
 For every parking space visiable in the view...
 1. Click the green Add button
 2. Use mouse mouse to move/resize the the box to define a parking space.  The center of the vehicle must be within the box.
-3. Set a name (id) for the parking space.  It is recommeded not to use names with spaces.  Use the name "My_Space_1" instead of "My Space 1"
+3. Set a name (id) for the parking space.  It is recommeded not to use names with spaces.
+Use the name "My_Space_1" instead of "My Space 1"
 4. Save
 
 To edit a parking space, click the space in the table below, make adjustments and click save.
