@@ -14,7 +14,7 @@ For every parking space visiable in the view...
 3. Set a name (id) for the parking space.
 4. Save
 
-To edit a parking space, klick the space in the table below, make adjustments and click save.
+To edit a parking space, click the space in the table below, make adjustments and click save.
 
 ### Validation
 To verify correct behaviour, each space will be marked red, green or yellow.  Red mean occupied, green means free and yellow means no transition has not been detected.  The table below shows the same information in text.
