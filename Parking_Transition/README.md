@@ -31,7 +31,7 @@ Select "Vehicle detection" to use object classification.  If [Axis License Plate
 If you notice false detection you could increase the minimum detection confidence level
 
 ### Transition period
-Vehicles or persons may block a parked vehicle for a short time and a transition event may occure.  Select long transitions period to avoid this.  An event will not be fired until a space is free/occupied for the given time.
+Moving vehicles or persons may block a parked vehicle for a short time and a transition event may occure.  Select longer transitions period to avoid this.  An event will not be fired until a space is free/occupied for the given time.
 
 ## System Integration
 An event is fired on every transition.  THis can be used to trigger actions in the camera or a VMS (Video Management System).  A second event that provides the number of vehicles occupiyn parking spaces.
