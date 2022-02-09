@@ -1,5 +1,5 @@
 # Parking Transition
-An ACAP that generates an event when a parking space changes transition between free and occupied.  Typically used for system integration to trigger actions when a specific parking space is free/occupied. 
+An ACAP that generates an event when a parking space changes between free and occupied.  Typically used for system integration to trigger actions when a specific parking space is free/occupied.
 
 ![Settings](https://files.juhlin.me/image/NMVTRKFYVW)
 
@@ -11,7 +11,7 @@ An ACAP that generates an event when a parking space changes transition between 
 For every parking space visiable in the view...
 1. Click the green Add button
 2. Use mouse mouse to move/resize the the box to define a parking space.  The center of the vehicle must be within the box.
-3. Set a name (id) for the parking space.
+3. Set a name (id) for the parking space.  It is recommeded not to use names with spaces.  Use the name "My_Space_1" instead of "My Space 1"
 4. Save
 
 To edit a parking space, click the space in the table below, make adjustments and click save.
@@ -34,7 +34,7 @@ If you notice false detection you could increase the minimum detection confidenc
 Moving vehicles or persons may block a parked vehicle for a short time and a transition event may occure.  Select longer transitions period to avoid this.  An event will not be fired until a space is free/occupied for the given time.
 
 ## System Integration
-An event is fired on every transition.  THis can be used to trigger actions in the camera or a VMS (Video Management System).  A second event that provides the number of vehicles occupiyn parking spaces.
+An event is fired on every transition.  This can be used to trigger actions in the camera or a VMS (Video Management System).  A second event that provides the number of vehicles occupiyn parking spaces.
 
 For easy integration to non video systems it is recommeded to use [SIMQTT](https://github.com/pandosme/acaps/tree/master/simqtt) to get data published as MQTT payload.
 
