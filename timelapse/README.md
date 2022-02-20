@@ -1,6 +1,7 @@
 # Timelapse Me
 Axis Camera ACAP that produces timelapse videos (AVI) triggered by timer, camera events or on sun noon.
 
+![Settings](https://files.juhlin.me/image/MRLYGXYJNW)
 
 # [Download (ZIP)](https://files.juhlin.me/acap/timelapseme)
 *Supported platforms: MIPS, ARMv7hf, AARCH64*
