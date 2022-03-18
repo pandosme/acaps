@@ -109,7 +109,7 @@ Path are based on trackers and published when an object left the scene (or track
 ## Coordinate system
 xMotion use a relative coordinate system from [0,0] to [1000,1000].  Origin is in the top left corner.
 
-Objects (x,y,w,h) is optimized for tracker/path and xy is the center of gravity (where the feet of a person touches the ground).  When visualizing an object bounding box as a rectangle, the x and y needs to be transformed.
+Objects (x,y,w,h) is optimized for tracker/path and xy is the center of gravity (where the feet of a person touches the ground).  The CX/CY is the point that is used when filtering and tracking.
 ```
   cx = x + w/2
   cy = y + h
