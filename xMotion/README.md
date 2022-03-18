@@ -111,8 +111,8 @@ xMotion use a relative coordinate system from [0,0] to [1000,1000].  Origin is i
 
 Objects (x,y,w,h) is optimized for tracker/path and xy is the center of gravity (where the feet of a person touches the ground).  When visualizing an object bounding box as a rectangle, the x and y needs to be transformed.
 ```
-  x = x - w/2
-  y = y - h
+  cx = x + w/2
+  cy = y + h
 ```
 ## Filter
 To optimize the system performance, it may be necessary to filter detections.  This reduces both payload and processing required by the consumer.  It is the objects x and y that is checked to area of intrest.  The bounding box, width and height has no impact.  See Coordinate system.
