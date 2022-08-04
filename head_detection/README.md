@@ -5,7 +5,7 @@ An ACAP that detects human heads in the scene and generates an precense and occu
 ## Prerequisite
 An Axis camera that supports deep-learning w/o TPU module.
 
-## [Download](https://files.juhlin.me/acap/heads)
+## [Download](https://api.aintegration.team/acap/heads?source=guthub)
 
 ## Settings
 Adjust and validate head detection.  To optimize detections, set detection area, max/min head size and ignore area.
