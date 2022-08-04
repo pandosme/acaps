@@ -3,7 +3,7 @@ Axis Camera ACAP that produces timelapse videos (AVI) triggered by timer, camera
 
 ![Settings](https://files.juhlin.me/image/MRLYGXYJNW)
 
-# [Download (ZIP)](https://files.juhlin.me/acap/timelapseme)
+# [Download (ZIP)](https://api.aintegration.team/acap/timelapseme?source=github)
 *Supported platforms: MIPS, ARMv7hf, AARCH64*
 
 ## Creating Timelapse
