@@ -3,7 +3,7 @@ An ACAP that generates an event when a parking space changes between free and oc
 
 ![Settings](https://files.juhlin.me/image/NMVTRKFYVW)
 
-# [Download (ZIP)](https://files.juhlin.me/acap/Parking)
+# [Download (ZIP)](https://api.aintegration.team/acap/parking)
 
 ## Spaces View
 
