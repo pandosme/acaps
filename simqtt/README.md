@@ -5,7 +5,7 @@ An MQTT Client for Axis devices that simplifies monitoring events over MQTT. All
 
 ![config](https://files.juhlin.me/image/UYJMBDEHGD)
 
-# [Download (ZIP)](https://files.juhlin.me/acap/simqtt)
+# [Download (ZIP)](https://api.aintegration.team/acap/simqtt?source=github)
 Unzip the file and install the eap-file on the camera.
 
 ## Installation
