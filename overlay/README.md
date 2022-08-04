@@ -4,7 +4,7 @@ Easily add a dynamic text overlay in video that can easily updated using HTTP (G
 
 ![overlay](https://files.juhlin.me/image/KTEOFBZUHZ)
 
-# [Download (ZIP)](https://files.juhlin.me/acap/overlay)
+# [Download (ZIP)](https://api.aintegration.team/acap/overlay?source=github)
 Unzip the file and install the eap-file on the camera.
 
 *Note that Overlay is only supported for cameras based on ARTPEC-7 and ARTPEC-8 platform*
