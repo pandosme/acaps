@@ -1,7 +1,7 @@
 # Detection
 An MQTT client that publish object detections (classifications) for cameras that supports for object classification.
 
-### [Download (ZIP)](https://files.juhlin.me/acap/detection)
+### [Download (ZIP)](https://api.aintegration.team/acap/detection?source=github)
 *Supported platforms: ARMv7hf*
 
 ## Messages View
