@@ -1,17 +1,15 @@
 # xMotion
 A camera MQTT client ACAP that publish motion-based analytics data that can be used for a number of different use cases.  Motion detection is a common use case but xMotion is mainly targeting path/flows monitoring, automation, counting and forensic search.  Systems can select different types of payloads depending on use case.  xMotion can run on both cameras and radar.
 
-* Note that when running on a Radar D2110, the firmware must be 10.11.72*
 
 # [Download (ZIP)](https://api.aintegration.team/acap/xmotion?source=github)
 
 Use version 1.x for cameras and radar products that does not support (or require) object classification
+Note that when running on a Radar D2110, the firmware must be 10.11.72 or earlier
 
 Use version 2.x for use-cases that require object classification (depending on camera support). Not supported in Radar products.
 
-Unzip files and install the eap-file corresponding to your device
 
-It is recommeded to use device firmware 10.8.x or later for better perfomance
 
 ## Messages view
 This page is designed for validation and not as a user client.  The video played is medium size resolution with 5 fps playback.  In order to get detections, trackers and paths to be displayed, the MQTT broker must support connectiion using WebSocket.  Green dots shows where objects are born and red where they died.
